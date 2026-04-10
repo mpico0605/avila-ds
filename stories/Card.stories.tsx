@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import React from 'react';
-import { Card } from './Card';
+import { Card, CardVariant } from './Card';
 
 const meta: Meta<typeof Card> = {
   title: 'Components/Card',
@@ -10,26 +10,23 @@ const meta: Meta<typeof Card> = {
   argTypes: {
     variant: {
       control: 'select',
-      options: ['light', 'dark', 'surface', 'surface-raised'],
-      description: 'Background/text color variant',
+      options: ['default', 'elevated', 'outlined'] satisfies CardVariant[],
+      description: 'Elevation level — flat surface, shadowed depth, or bordered outline',
+      table: { defaultValue: { summary: 'default' } },
     },
     padding: {
       control: 'select',
       options: ['sm', 'md', 'lg'],
+      description: 'Inner padding preset',
+      table: { defaultValue: { summary: 'md' } },
     },
-    shadow: {
-      control: 'select',
-      options: ['none', 'sm', 'md', 'lg'],
+    title: { control: 'text', description: 'Card heading' },
+    subtitle: { control: 'text', description: 'Secondary label beneath the title' },
+    divider: {
+      control: 'boolean',
+      description: 'Show a hairline divider above the footer',
+      table: { defaultValue: { summary: 'false' } },
     },
-    accent: {
-      control: 'select',
-      options: ['none', 'hot-pink', 'marigold', 'cobalt', 'teal'],
-      description: 'Left-edge accent stripe',
-    },
-    bordered: { control: 'boolean' },
-    divider: { control: 'boolean' },
-    title: { control: 'text' },
-    subtitle: { control: 'text' },
   },
 };
 
@@ -37,59 +34,90 @@ export default meta;
 type Story = StoryObj<typeof Card>;
 
 const SampleBody = () => (
-  <p style={{ margin: 0, fontSize: 14, lineHeight: 1.6, color: 'inherit' }}>
+  <p style={{ margin: 0, color: 'inherit' }}>
     Avila Design System surfaces are warm, editorial, and rooted in craft.
     Every card is a contained moment of clarity.
   </p>
 );
 
-export const Default: Story = {
+const SampleFooter = () => (
+  <button
+    style={{
+      background: 'var(--avila-color-accent-hot-pink)',
+      color: 'var(--avila-color-text-inverse)',
+      border: 'none',
+      padding: 'var(--avila-space-2) var(--avila-space-5)',
+      fontFamily: "'Bebas Neue', sans-serif",
+      fontSize: 'var(--avila-role-label-md)',
+      letterSpacing: 'var(--avila-ls-widest)',
+      textTransform: 'uppercase',
+      cursor: 'pointer',
+      borderRadius: 'var(--avila-radius-sm)',
+    }}
+  >
+    Learn More
+  </button>
+);
+
+/* ── Playground ────────────────────────────────────────────────────────────── */
+export const Playground: Story = {
   args: {
-    variant: 'light',
+    variant: 'elevated',
     padding: 'md',
-    shadow: 'sm',
-    bordered: true,
-    accent: 'none',
     title: 'Card Title',
     subtitle: 'Optional subtitle',
-    children: <SampleBody />,
+    divider: false,
   },
-  decorators: [(Story) => <div style={{ width: 360 }}><Story /></div>],
+  render: (args) => (
+    <div style={{ width: 360 }}>
+      <Card {...args} footer={<SampleFooter />}>
+        <SampleBody />
+      </Card>
+    </div>
+  ),
 };
 
-export const Dark: Story = {
-  args: {
-    variant: 'dark',
-    padding: 'md',
-    shadow: 'md',
-    bordered: true,
-    title: 'Dark Variant',
-    subtitle: 'Ink-100 background',
-    children: <SampleBody />,
-  },
-  decorators: [(Story) => <div style={{ width: 360 }}><Story /></div>],
-};
-
-export const Surface: Story = {
-  args: {
-    variant: 'surface',
-    padding: 'md',
-    shadow: 'sm',
-    bordered: true,
-    title: 'Surface Variant',
-    subtitle: 'Parchment background',
-    children: <SampleBody />,
-  },
-  decorators: [(Story) => <div style={{ width: 360 }}><Story /></div>],
-};
-
-export const WithAccentStripe: Story = {
-  name: 'Accent Stripes',
+/* ── Individual variants ───────────────────────────────────────────────────── */
+export const Default: Story = {
+  name: 'Default',
   render: () => (
-    <div style={{ display: 'flex', flexDirection: 'column', gap: 16, width: 360 }}>
-      {(['hot-pink', 'marigold', 'cobalt', 'teal'] as const).map((accent) => (
-        <Card key={accent} variant="light" accent={accent} bordered padding="md" shadow="sm"
-          title={`Accent: ${accent}`} subtitle="Left-edge stripe">
+    <div style={{ width: 360 }}>
+      <Card variant="default" title="Default" subtitle="Flat surface with subtle border">
+        <SampleBody />
+      </Card>
+    </div>
+  ),
+};
+
+export const Elevated: Story = {
+  name: 'Elevated',
+  render: () => (
+    <div style={{ width: 360 }}>
+      <Card variant="elevated" title="Elevated" subtitle="Drop shadow for lifted depth">
+        <SampleBody />
+      </Card>
+    </div>
+  ),
+};
+
+export const Outlined: Story = {
+  name: 'Outlined',
+  render: () => (
+    <div style={{ width: 360 }}>
+      <Card variant="outlined" title="Outlined" subtitle="Strong border, no shadow">
+        <SampleBody />
+      </Card>
+    </div>
+  ),
+};
+
+/* ── All variants ──────────────────────────────────────────────────────────── */
+export const AllVariants: Story = {
+  name: 'All Variants',
+  render: () => (
+    <div style={{ display: 'flex', gap: 24, alignItems: 'flex-start', flexWrap: 'wrap' }}>
+      {(['default', 'elevated', 'outlined'] as CardVariant[]).map((v) => (
+        <Card key={v} variant={v} title={v.charAt(0).toUpperCase() + v.slice(1)} style={{ width: 280 }}>
           <SampleBody />
         </Card>
       ))}
@@ -97,45 +125,34 @@ export const WithAccentStripe: Story = {
   ),
 };
 
-export const WithFooter: Story = {
-  args: {
-    variant: 'light',
-    padding: 'md',
-    shadow: 'sm',
-    bordered: true,
-    divider: true,
-    title: 'Card with Footer',
-    subtitle: 'Divider + action slot',
-    children: <SampleBody />,
-    footer: (
-      <button
-        style={{
-          background: 'var(--avila-color-interactive-primary-bg)',
-          color: 'var(--avila-color-interactive-primary-text)',
-          border: 'none',
-          padding: '8px 20px',
-          fontFamily: "'Bebas Neue', sans-serif",
-          fontSize: 14,
-          letterSpacing: '0.04em',
-          cursor: 'pointer',
-        }}
-      >
-        Learn More
-      </button>
-    ),
-  },
-  decorators: [(Story) => <div style={{ width: 360 }}><Story /></div>],
-};
-
-export const AllVariants: Story = {
-  name: 'All Variants',
+/* ── Padding sizes ─────────────────────────────────────────────────────────── */
+export const PaddingSizes: Story = {
+  name: 'Padding Sizes',
   render: () => (
-    <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 320px)', gap: 20 }}>
-      {(['light', 'dark', 'surface', 'surface-raised'] as const).map((v) => (
-        <Card key={v} variant={v} bordered shadow="sm" padding="md" title={v}>
+    <div style={{ display: 'flex', flexDirection: 'column', gap: 16, width: 360 }}>
+      {(['sm', 'md', 'lg'] as const).map((p) => (
+        <Card key={p} variant="outlined" padding={p} title={`padding-${p}`}>
           <SampleBody />
         </Card>
       ))}
+    </div>
+  ),
+};
+
+/* ── With footer ───────────────────────────────────────────────────────────── */
+export const WithFooter: Story = {
+  name: 'With Footer + Divider',
+  render: () => (
+    <div style={{ width: 360 }}>
+      <Card
+        variant="elevated"
+        title="Card with Footer"
+        subtitle="Divider + action slot"
+        divider
+        footer={<SampleFooter />}
+      >
+        <SampleBody />
+      </Card>
     </div>
   ),
 };

@@ -1,76 +1,48 @@
 /* ─── AvilaDS Card ──────────────────────────────────────────────────────────
-   All values reference --avila-* CSS custom properties from
-   dist/css/tokens.light.css / tokens.dark.css.
-   No raw hex values here — token changes propagate automatically.
+   All values reference --avila-* CSS custom properties.
+   No raw hex or pixel values — token changes propagate automatically.
 ─────────────────────────────────────────────────────────────────────────── */
 
 .card {
   position: relative;
   display: flex;
   flex-direction: column;
-  border-radius: 0; /* sharp corners — matches Figma */
+  background-color: var(--avila-color-card-bg-light);
+  color: var(--avila-color-text-primary);
+  border-radius: var(--avila-radius-lg);
+  border: 1px solid transparent;
   transition: box-shadow var(--avila-duration-base, 150ms) ease;
 }
 
-/* ── Padding sizes ──────────────────────────────────────────────────────── */
+/* ── Padding sizes ───────────────────────────────────────────────────────── */
 .padding-sm { padding: var(--avila-space-4); }
 .padding-md { padding: var(--avila-space-6); }
 .padding-lg { padding: var(--avila-space-8); }
 
 /* ── Variants ────────────────────────────────────────────────────────────── */
-.variant-light {
-  background-color: var(--avila-color-card-bg-light);
-  color: var(--avila-color-text-primary);
+
+/* default — flat surface, subtle background differentiation, no shadow */
+.variant-default {
+  border-color: var(--avila-color-card-border);
+  box-shadow: none;
 }
 
-.variant-dark {
-  background-color: var(--avila-color-card-bg-dark);
-  color: var(--avila-color-text-inverse);
+/* elevated — lifted surface with drop shadow */
+.variant-elevated {
+  border-color: transparent;
+  box-shadow:
+    0 var(--avila-shadow-xs) var(--avila-shadow-md) 0 var(--avila-color-card-shadow),
+    0 var(--avila-shadow-xs) var(--avila-shadow-sm) 0 var(--avila-color-card-shadow);
 }
 
-.variant-surface {
-  background-color: var(--avila-color-background-surface);
-  color: var(--avila-color-text-primary);
+/* outlined — explicit border, no shadow */
+.variant-outlined {
+  border-color: var(--avila-color-border-strong);
+  box-shadow: none;
 }
 
-.variant-surface-raised {
-  background-color: var(--avila-color-background-surface-raised);
-  color: var(--avila-color-text-primary);
-}
-
-/* ── Border modifier ─────────────────────────────────────────────────────── */
-.bordered {
-  border: 1px solid var(--avila-color-card-border);
-}
-
-.bordered.variant-dark {
-  border-color: var(--avila-primitive-color-ink-90);
-}
-
-/* ── Shadow modifier ─────────────────────────────────────────────────────── */
-.shadow-sm {
-  box-shadow: 0 2px var(--avila-shadow-sm) var(--avila-color-card-shadow);
-}
-
-.shadow-md {
-  box-shadow: 0 4px var(--avila-shadow-md) var(--avila-color-card-shadow);
-}
-
-.shadow-lg {
-  box-shadow: 0 8px var(--avila-shadow-lg) var(--avila-color-card-shadow);
-}
-
-/* ── Accent strip (left border accent) ──────────────────────────────────── */
-.accent-hot-pink  { border-left: 3px solid var(--avila-color-accent-hot-pink); }
-.accent-marigold  { border-left: 3px solid var(--avila-color-accent-marigold); }
-.accent-cobalt    { border-left: 3px solid var(--avila-color-accent-cobalt); }
-.accent-teal      { border-left: 3px solid var(--avila-color-accent-teal); }
-
-/* ── Inner layout helpers ────────────────────────────────────────────────── */
+/* ── Inner layout helpers ─────────────────────────────────────────────────── */
 .header {
-  display: flex;
-  align-items: flex-start;
-  justify-content: space-between;
   margin-bottom: var(--avila-space-3);
 }
 
@@ -91,10 +63,6 @@
   line-height: var(--avila-lh-normal);
 }
 
-.variant-dark .subtitle {
-  color: var(--avila-primitive-color-ink-40);
-}
-
 .body {
   flex: 1;
   font-size: var(--avila-role-body-sm);
@@ -110,11 +78,8 @@
 }
 
 .divider {
+  border: none;
   height: 1px;
   background-color: var(--avila-color-border-default);
-  margin: var(--avila-space-4) 0;
-}
-
-.variant-dark .divider {
-  background-color: var(--avila-primitive-color-ink-90);
+  margin: var(--avila-space-4) 0 0;
 }

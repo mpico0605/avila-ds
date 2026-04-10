@@ -27,10 +27,12 @@ const meta: Meta<typeof Input> = {
       control: 'select',
       options: ['sm', 'md', 'lg'],
       description: 'Height and font-size preset',
+      table: { defaultValue: { summary: 'md' } },
     },
     status: {
       control: 'select',
       options: ['default', 'error', 'success'],
+      table: { defaultValue: { summary: 'default' } },
     },
     label: { control: 'text' },
     placeholder: { control: 'text' },
@@ -45,7 +47,8 @@ const meta: Meta<typeof Input> = {
 export default meta;
 type Story = StoryObj<typeof Input>;
 
-export const Default: Story = {
+/* ── Playground ────────────────────────────────────────────────────────────── */
+export const Playground: Story = {
   args: {
     label: 'Email address',
     placeholder: 'you@example.com',
@@ -56,6 +59,103 @@ export const Default: Story = {
   decorators: [(Story) => <div style={{ width: 320 }}><Story /></div>],
 };
 
+/* ── Default ───────────────────────────────────────────────────────────────── */
+export const Default: Story = {
+  name: 'Default',
+  render: () => (
+    <div style={{ width: 320 }}>
+      <Input placeholder="Enter a value…" />
+    </div>
+  ),
+};
+
+/* ── With Label ────────────────────────────────────────────────────────────── */
+export const WithLabel: Story = {
+  name: 'With Label',
+  render: () => (
+    <div style={{ width: 320 }}>
+      <Input label="Full name" placeholder="Frida Kahlo" />
+    </div>
+  ),
+};
+
+/* ── With Helper Text ──────────────────────────────────────────────────────── */
+export const WithHelperText: Story = {
+  name: 'With Helper Text',
+  render: () => (
+    <div style={{ width: 320 }}>
+      <Input
+        label="Email address"
+        placeholder="you@example.com"
+        helperText="We'll only use this to send you important updates."
+      />
+    </div>
+  ),
+};
+
+/* ── Error ─────────────────────────────────────────────────────────────────── */
+export const Error: Story = {
+  name: 'Error',
+  render: () => (
+    <div style={{ width: 320 }}>
+      <Input
+        label="Email address"
+        placeholder="you@example.com"
+        status="error"
+        defaultValue="not-an-email"
+        errorText="Please enter a valid email address."
+      />
+    </div>
+  ),
+};
+
+/* ── Disabled ──────────────────────────────────────────────────────────────── */
+export const Disabled: Story = {
+  name: 'Disabled',
+  render: () => (
+    <div style={{ width: 320 }}>
+      <Input
+        label="Account ID"
+        defaultValue="ACC-00142"
+        disabled
+        helperText="This field cannot be edited."
+      />
+    </div>
+  ),
+};
+
+/* ── All Variants ──────────────────────────────────────────────────────────── */
+export const AllVariants: Story = {
+  name: 'All Variants',
+  render: () => (
+    <div style={{ display: 'flex', flexDirection: 'column', gap: 24, width: 320 }}>
+      <Input placeholder="Default — no label" />
+      <Input label="With Label" placeholder="Labelled input" />
+      <Input
+        label="With Helper Text"
+        placeholder="you@example.com"
+        helperText="We'll only use this for account recovery."
+      />
+      <Input
+        label="Error"
+        placeholder="Enter value"
+        status="error"
+        defaultValue="bad-input"
+        errorText="This field contains an invalid value."
+      />
+      <Input
+        label="Success"
+        placeholder="Enter value"
+        status="success"
+        defaultValue="valid@example.com"
+        successText="Looks good!"
+      />
+      <Input label="Disabled" defaultValue="Read-only value" disabled />
+    </div>
+  ),
+};
+
+/* ── Sizes ─────────────────────────────────────────────────────────────────── */
 export const Sizes: Story = {
   name: 'Sizes',
   render: () => (
@@ -67,30 +167,7 @@ export const Sizes: Story = {
   ),
 };
 
-export const Statuses: Story = {
-  name: 'Validation States',
-  render: () => (
-    <div style={{ display: 'flex', flexDirection: 'column', gap: 20, width: 320 }}>
-      <Input label="Default" placeholder="Default state" status="default" />
-      <Input
-        label="Error"
-        placeholder="Invalid input"
-        status="error"
-        defaultValue="bad@input"
-        errorText="Please enter a valid email address."
-      />
-      <Input
-        label="Success"
-        placeholder="Valid input"
-        status="success"
-        defaultValue="good@example.com"
-        successText="Email verified successfully."
-      />
-      <Input label="Disabled" placeholder="Not editable" disabled defaultValue="locked" />
-    </div>
-  ),
-};
-
+/* ── With Icons ────────────────────────────────────────────────────────────── */
 export const WithIcons: Story = {
   name: 'With Icons',
   render: () => (
@@ -98,7 +175,7 @@ export const WithIcons: Story = {
       <Input label="Search" placeholder="Search…" leadingIcon={<SearchIcon />} />
       <Input label="Password" placeholder="Enter password" type="password" trailingIcon={<EyeIcon />} />
       <Input
-        label="Full"
+        label="Both icons"
         placeholder="Search by name"
         leadingIcon={<SearchIcon />}
         trailingIcon={<EyeIcon />}
@@ -107,13 +184,17 @@ export const WithIcons: Story = {
   ),
 };
 
+/* ── Required ──────────────────────────────────────────────────────────────── */
 export const Required: Story = {
-  args: {
-    label: 'Full name',
-    placeholder: 'Frida Kahlo',
-    required: true,
-    helperText: 'As it appears on your passport.',
-    size: 'md',
-  },
-  decorators: [(Story) => <div style={{ width: 320 }}><Story /></div>],
+  name: 'Required',
+  render: () => (
+    <div style={{ width: 320 }}>
+      <Input
+        label="Full name"
+        placeholder="Frida Kahlo"
+        required
+        helperText="As it appears on your passport."
+      />
+    </div>
+  ),
 };
