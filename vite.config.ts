@@ -1,11 +1,7 @@
 import { defineConfig } from 'vite';
-import react from '@vitejs/plugin-react';
 
+// @vitejs/plugin-react is omitted here — @storybook/react-vite adds it automatically.
+// Adding it twice breaks Storybook's virtual module setup (__STORYBOOK_MODULE_PREVIEW_API__).
 export default defineConfig({
-  plugins: [
-    react({
-      // Automatic JSX runtime — no need to import React in every file
-      jsxRuntime: 'automatic',
-    }),
-  ],
+  plugins: [],
 });
