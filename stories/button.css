@@ -1,0 +1,132 @@
+/* ─── AvilaDS Button ───────────────────────────────────────────────────────
+   All values reference CSS custom properties from
+   dist/css/tokens.light.css / tokens.dark.css (loaded in .storybook/preview.js).
+   No raw hex values live here — change a token, every button updates.
+─────────────────────────────────────────────────────────────────────────── */
+
+/* Base */
+.avila-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--avila-space-2);
+  border: 2px solid transparent;
+  border-radius: 0; /* sharp corners — matches Figma */
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  letter-spacing: 0.04em;
+  line-height: 1;
+  text-transform: uppercase;
+  white-space: nowrap;
+  cursor: pointer;
+  user-select: none;
+  transition:
+    background-color var(--avila-duration-base, 150ms) ease,
+    color            var(--avila-duration-base, 150ms) ease,
+    border-color     var(--avila-duration-base, 150ms) ease,
+    opacity          var(--avila-duration-base, 150ms) ease;
+}
+
+.avila-btn:focus-visible {
+  outline: 2px solid var(--avila-color-border-focus);
+  outline-offset: 2px;
+}
+
+/* ── Sizes ──────────────────────────────────────────────────────────────── */
+.avila-btn--sm {
+  height: 36px;
+  padding: 0 var(--avila-space-4);
+  font-size: 13px;
+}
+
+.avila-btn--md {
+  height: 44px; /* matches Figma spec exactly */
+  padding: 0 var(--avila-space-5);
+  font-size: 16px;
+}
+
+.avila-btn--lg {
+  height: 52px;
+  padding: 0 var(--avila-space-7);
+  font-size: 18px;
+}
+
+/* ── Full-width modifier ────────────────────────────────────────────────── */
+.avila-btn--full-width {
+  width: 100%;
+}
+
+/* ── Disabled ───────────────────────────────────────────────────────────── */
+.avila-btn:disabled,
+.avila-btn[aria-disabled='true'] {
+  opacity: 0.4;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+/* ── Variant: Primary (hot-pink bg) ─────────────────────────────────────── */
+.avila-btn--primary {
+  background-color: var(--avila-color-interactive-primary-bg);
+  color: var(--avila-color-interactive-primary-text);
+}
+.avila-btn--primary:hover:not(:disabled) {
+  background-color: var(--avila-color-interactive-primary-bg-hover);
+}
+.avila-btn--primary:active:not(:disabled) {
+  background-color: var(--avila-color-interactive-primary-bg-active);
+}
+
+/* ── Variant: Outline (ghost / transparent) ─────────────────────────────── */
+.avila-btn--outline {
+  background-color: transparent;
+  color: var(--avila-color-interactive-ghost-text);
+  border: 1.5px solid var(--avila-color-interactive-ghost-border);
+}
+.avila-btn--outline:hover:not(:disabled) {
+  background-color: var(--avila-primitive-color-hot-pink-subtle);
+}
+.avila-btn--outline:active:not(:disabled) {
+  background-color: var(--avila-color-interactive-primary-bg);
+  color: var(--avila-color-interactive-primary-text);
+  border-color: var(--avila-color-interactive-primary-bg);
+}
+
+/* ── Variant: Dark (ink-100 bg) ─────────────────────────────────────────── */
+.avila-btn--dark {
+  background-color: var(--avila-color-interactive-secondary-bg);
+  color: var(--avila-color-interactive-secondary-text);
+}
+.avila-btn--dark:hover:not(:disabled) {
+  background-color: var(--avila-primitive-color-ink-90);
+}
+.avila-btn--dark:active:not(:disabled) {
+  background-color: var(--avila-primitive-color-ink-80);
+}
+
+/* ── Variant: Teal ──────────────────────────────────────────────────────── */
+.avila-btn--teal {
+  background-color: var(--avila-primitive-color-teal);
+  color: var(--avila-primitive-color-ink-100); /* dark text on light bg */
+}
+.avila-btn--teal:hover:not(:disabled) {
+  background-color: var(--avila-primitive-color-teal-hover);
+}
+
+/* ── Variant: Cobalt ────────────────────────────────────────────────────── */
+.avila-btn--cobalt {
+  background-color: var(--avila-primitive-color-cobalt);
+  color: var(--avila-primitive-color-parchment);
+}
+.avila-btn--cobalt:hover:not(:disabled) {
+  background-color: var(--avila-primitive-color-cobalt-hover);
+}
+
+/* ── Variant: Marigold ──────────────────────────────────────────────────── */
+.avila-btn--marigold {
+  background-color: var(--avila-primitive-color-marigold);
+  color: var(--avila-primitive-color-ink-100); /* dark text on warm bg */
+}
+.avila-btn--marigold:hover:not(:disabled) {
+  background-color: var(--avila-primitive-color-marigold-hover);
+}

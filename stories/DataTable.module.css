@@ -1,0 +1,144 @@
+/* ─── AvilaDS DataTable ─────────────────────────────────────────────────────
+   All values reference --avila-* CSS custom properties.
+─────────────────────────────────────────────────────────────────────────── */
+
+.tableWrapper {
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  border: 1px solid var(--avila-color-border-default);
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: var(--avila-role-body-sm);
+  color: var(--avila-color-text-primary);
+  background-color: var(--avila-color-card-bg-light);
+}
+
+/* ── Caption / table title ──────────────────────────────────────────────── */
+.caption {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: var(--avila-fs-xl);
+  letter-spacing: var(--avila-ls-wide);
+  color: var(--avila-color-text-primary);
+  text-align: left;
+  padding: var(--avila-space-3) var(--avila-space-4) var(--avila-space-2);
+  caption-side: top;
+}
+
+/* ── Header ──────────────────────────────────────────────────────────────── */
+.thead {
+  background-color: var(--avila-color-background-surface);
+  border-bottom: 2px solid var(--avila-color-border-strong);
+}
+
+.th {
+  padding: var(--avila-space-3) var(--avila-space-4);
+  text-align: left;
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: var(--avila-role-label-sm);
+  font-weight: var(--avila-fw-regular);
+  letter-spacing: var(--avila-ls-widest);
+  text-transform: uppercase;
+  color: var(--avila-color-text-secondary);
+  white-space: nowrap;
+  user-select: none;
+}
+
+.th.sortable {
+  cursor: pointer;
+}
+
+.th.sortable:hover {
+  color: var(--avila-color-text-accent);
+}
+
+.sortIcon {
+  display: inline-flex;
+  align-items: center;
+  margin-left: var(--avila-space-1);
+  opacity: 0.4;
+  vertical-align: middle;
+}
+
+.th.sortAsc .sortIcon,
+.th.sortDesc .sortIcon {
+  opacity: 1;
+  color: var(--avila-color-text-accent);
+}
+
+/* ── Body ────────────────────────────────────────────────────────────────── */
+.tbody tr {
+  border-bottom: 1px solid var(--avila-color-border-default);
+  transition: background-color var(--avila-duration-fast, 75ms) ease;
+}
+
+.tbody tr:last-child {
+  border-bottom: none;
+}
+
+.td {
+  padding: var(--avila-space-3) var(--avila-space-4);
+  vertical-align: middle;
+  line-height: var(--avila-lh-normal);
+  color: var(--avila-color-text-primary);
+}
+
+/* ── Striped modifier ────────────────────────────────────────────────────── */
+.striped .tbody tr:nth-child(even) {
+  background-color: var(--avila-color-background-surface);
+}
+
+/* ── Hover modifier ──────────────────────────────────────────────────────── */
+.hoverable .tbody tr:hover {
+  background-color: var(--avila-primitive-color-hot-pink-subtle);
+}
+
+/* ── Compact size ────────────────────────────────────────────────────────── */
+.size-sm .th,
+.size-sm .td {
+  padding: var(--avila-space-2) var(--avila-space-3);
+  font-size: var(--avila-role-body-xs);
+}
+
+.size-sm .caption {
+  font-size: var(--avila-fs-lg);
+  padding: var(--avila-space-2) var(--avila-space-3) var(--avila-space-1);
+}
+
+.size-lg .th,
+.size-lg .td {
+  padding: var(--avila-space-4) var(--avila-space-5);
+  font-size: var(--avila-role-body-md);
+}
+
+/* ── Empty state ─────────────────────────────────────────────────────────── */
+.emptyCell {
+  text-align: center;
+  padding: var(--avila-space-10) var(--avila-space-4);
+  color: var(--avila-color-text-muted);
+  font-size: var(--avila-role-body-sm);
+}
+
+/* ── Footer / pagination area ────────────────────────────────────────────── */
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--avila-space-3) var(--avila-space-4);
+  border-top: 1px solid var(--avila-color-border-default);
+  background-color: var(--avila-color-background-surface);
+  font-size: var(--avila-role-body-xs);
+  color: var(--avila-color-text-muted);
+}
+
+/* ── Numeric alignment helper ────────────────────────────────────────────── */
+.alignRight {
+  text-align: right;
+}
+
+.alignCenter {
+  text-align: center;
+}

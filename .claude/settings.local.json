@@ -1,0 +1,41 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm install:*)",
+      "Read(//usr/local/bin/**)",
+      "Read(//Users/picojr/.nvm/versions/**)",
+      "Read(//opt/homebrew/bin/**)",
+      "Read(//Users/picojr/**)",
+      "Bash(/opt/homebrew/bin/brew install:*)",
+      "Bash(npm run:*)",
+      "Bash(export PATH=\"/opt/homebrew/bin:/usr/local/bin:$PATH\")",
+      "Bash(node -e \"const SD = require\\('style-dictionary'\\); console.log\\(typeof SD\\); console.log\\(Object.keys\\(SD\\)\\);\")",
+      "Bash(npx storybook@8 init --type react --builder vite --no-dev)",
+      "Bash(npx storybook@8 build --quiet)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" http://localhost:6006)",
+      "Bash(node -e ':*)",
+      "Bash(ls /usr/local/bin/node*)",
+      "Bash(ls /opt/homebrew/bin/node*)",
+      "Bash(/opt/homebrew/bin/node -e ':*)",
+      "Bash(node scripts/build-tokens.js)",
+      "Bash(ls /Users/picojr/Documents/NPM-Projects/AvilaDS-StoryBook/*.json)",
+      "Bash(pkill -f \"storybook dev\")",
+      "mcp__Claude_Preview__preview_start",
+      "Bash(xattr ~/Documents)",
+      "Bash(mkdir -p ~/dev)",
+      "Bash(mv ~/Documents/NPM-Projects/AvilaDS-StoryBook ~/dev/AvilaDS-StoryBook)",
+      "Bash(brctl dump:*)",
+      "Read(//private/tmp/**)",
+      "Bash(cp -R ~/Documents/NPM-Projects/AvilaDS-StoryBook ~/dev/)",
+      "Bash(node -e \"console.log\\(require\\('/Users/picojr/dev/AvilaDS-StoryBook/node_modules/react/package.json'\\).version\\)\")",
+      "Bash(node -e \"const p = require\\('./node_modules/@radix-ui/react-primitive/package.json'\\); console.log\\(p.version, p.peerDependencies\\)\")",
+      "Bash(node -e \"const p = require\\('./node_modules/@radix-ui/react-slot/package.json'\\); console.log\\(p.version\\); console.log\\(Object.keys\\(require\\('./node_modules/@radix-ui/react-slot/dist/index.js'\\)\\)\\)\")",
+      "Bash(node --input-type=module)",
+      "Bash(git init:*)",
+      "Bash(git add:*)",
+      "Bash(git rm:*)",
+      "Bash(git commit -m ':*)",
+      "Bash(rm /Users/picojr/dev/AvilaDS-StoryBook/.git/index.lock)"
+    ]
+  }
+}

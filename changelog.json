@@ -1,0 +1,145 @@
+{
+  "version": "1.0.0",
+  "entries": [
+    {
+      "id": "2026-04-08T181750030Z",
+      "date": "2026-04-08",
+      "snapshotRef": "2026-04-08T181749554Z.json",
+      "summary": {
+        "added": 0,
+        "removed": 0,
+        "modified": 16
+      },
+      "changes": [
+        {
+          "token": "ColorAccentHotPink",
+          "changeType": "modified",
+          "tokenType": "color",
+          "mode": "shared",
+          "before": "#e8195a",
+          "after": "#ff1f61"
+        },
+        {
+          "token": "ColorAccentTeal",
+          "changeType": "modified",
+          "tokenType": "color",
+          "mode": "shared",
+          "before": "#00c9a7",
+          "after": "#00d4b0"
+        },
+        {
+          "token": "ColorBorderFocus",
+          "changeType": "modified",
+          "tokenType": "color",
+          "mode": "shared",
+          "before": "#e8195a",
+          "after": "#ff1f61"
+        },
+        {
+          "token": "ColorFeedbackErrorText",
+          "changeType": "modified",
+          "tokenType": "color",
+          "mode": "dark",
+          "before": "#e8195a",
+          "after": "#ff1f61"
+        },
+        {
+          "token": "ColorFeedbackSuccessText",
+          "changeType": "modified",
+          "tokenType": "color",
+          "mode": "dark",
+          "before": "#00c9a7",
+          "after": "#00d4b0"
+        },
+        {
+          "token": "ColorInteractiveGhostBorder",
+          "changeType": "modified",
+          "tokenType": "color",
+          "mode": "shared",
+          "before": "#e8195a",
+          "after": "#ff1f61"
+        },
+        {
+          "token": "ColorInteractiveGhostText",
+          "changeType": "modified",
+          "tokenType": "color",
+          "mode": "shared",
+          "before": "#e8195a",
+          "after": "#ff1f61"
+        },
+        {
+          "token": "ColorInteractivePrimaryBg",
+          "changeType": "modified",
+          "tokenType": "color",
+          "mode": "shared",
+          "before": "#e8195a",
+          "after": "#ff1f61"
+        },
+        {
+          "token": "ColorNavCtaBg",
+          "changeType": "modified",
+          "tokenType": "color",
+          "mode": "shared",
+          "before": "#e8195a",
+          "after": "#ff1f61"
+        },
+        {
+          "token": "ColorRainbowHotPink",
+          "changeType": "modified",
+          "tokenType": "color",
+          "mode": "shared",
+          "before": "#e8195a",
+          "after": "#ff1f61"
+        },
+        {
+          "token": "ColorRainbowTeal",
+          "changeType": "modified",
+          "tokenType": "color",
+          "mode": "shared",
+          "before": "#00c9a7",
+          "after": "#00d4b0"
+        },
+        {
+          "token": "ColorTextAccent",
+          "changeType": "modified",
+          "tokenType": "color",
+          "mode": "shared",
+          "before": "#e8195a",
+          "after": "#ff1f61"
+        },
+        {
+          "token": "ColorTextLink",
+          "changeType": "modified",
+          "tokenType": "color",
+          "mode": "shared",
+          "before": "#e8195a",
+          "after": "#ff1f61"
+        },
+        {
+          "token": "PrimitiveColorHotPink",
+          "changeType": "modified",
+          "tokenType": "color",
+          "mode": "shared",
+          "before": "#e8195a",
+          "after": "#ff1f61"
+        },
+        {
+          "token": "PrimitiveColorTeal",
+          "changeType": "modified",
+          "tokenType": "color",
+          "mode": "shared",
+          "before": "#00c9a7",
+          "after": "#00d4b0"
+        },
+        {
+          "token": "Space4",
+          "changeType": "modified",
+          "tokenType": "dimension",
+          "mode": "shared",
+          "before": "16px",
+          "after": "18px"
+        }
+      ]
+    }
+  ]
+}

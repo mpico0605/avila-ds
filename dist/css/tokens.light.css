@@ -1,0 +1,275 @@
+/**
+ * Do not edit directly, this file was auto-generated.
+ */
+
+:root, [data-theme="light"] {
+  --avila-primitive-color-hot-pink: #e8195a;
+  --avila-primitive-color-hot-pink-hover: #b8103f;
+  --avila-primitive-color-hot-pink-active: #8a0c2e;
+  --avila-primitive-color-hot-pink-subtle: #fce8ee;
+  --avila-primitive-color-marigold: #f5a623;
+  --avila-primitive-color-marigold-hover: #c47d0a;
+  --avila-primitive-color-marigold-subtle: #fdf3e0;
+  --avila-primitive-color-cobalt: #1b4fd8;
+  --avila-primitive-color-cobalt-hover: #1440b0;
+  --avila-primitive-color-cobalt-subtle: #e8eefb;
+  --avila-primitive-color-teal: #00c9a7;
+  --avila-primitive-color-teal-hover: #009e84;
+  --avila-primitive-color-teal-subtle: #e5faf7;
+  --avila-primitive-color-ink-100: #1a1208;
+  --avila-primitive-color-ink-90: #2e2416;
+  --avila-primitive-color-ink-80: #3d3020;
+  --avila-primitive-color-ink-70: #4f3e2c;
+  --avila-primitive-color-ink-60: #6b5740;
+  --avila-primitive-color-ink-50: #7a6e65;
+  --avila-primitive-color-ink-40: #a09488;
+  --avila-primitive-color-ink-30: #c0b8ae;
+  --avila-primitive-color-ink-20: #d8d2ca;
+  --avila-primitive-color-ink-10: #ece8e2;
+  --avila-primitive-color-ink-05: #f5f2ee;
+  --avila-primitive-color-parchment: #f5f0e8;
+  --avila-primitive-color-parchment-dark: #e8e0d4;
+  --avila-primitive-color-off-white: #fdfaf6;
+  --avila-primitive-color-white: #ffffff;
+  --avila-primitive-color-success-base: #1a7a4a;
+  --avila-primitive-color-success-subtle: #e6f7ee;
+  --avila-primitive-color-warning-base: #b86a00;
+  --avila-primitive-color-warning-subtle: #fff3dc;
+  --avila-primitive-color-error-base: #c8282e;
+  --avila-primitive-color-error-subtle: #fdecea;
+  --avila-primitive-color-info-base: #1b4fd8;
+  --avila-primitive-color-info-subtle: #e8eefb;
+  --avila-space-0: 0px;
+  --avila-space-1: 4px;
+  --avila-space-2: 8px;
+  --avila-space-3: 12px;
+  --avila-space-4: 16px;
+  --avila-space-5: 20px;
+  --avila-space-6: 24px;
+  --avila-space-7: 28px;
+  --avila-space-8: 32px;
+  --avila-space-9: 36px;
+  --avila-space-10: 40px;
+  --avila-space-11: 44px;
+  --avila-space-12: 48px;
+  --avila-space-14: 56px;
+  --avila-space-16: 64px;
+  --avila-space-20: 80px;
+  --avila-space-24: 96px;
+  --avila-space-28: 112px;
+  --avila-space-32: 128px;
+  --avila-space-36: 144px;
+  --avila-space-40: 160px;
+  --avila-space-48: 192px;
+  --avila-space-56: 224px;
+  --avila-space-64: 256px;
+  --avila-space-80: 320px;
+  --avila-space-1px: 1px; /** 1px hairline */
+  --avila-space-0-5: 2px;
+  --avila-space-1-5: 6px;
+  --avila-space-2-5: 10px;
+  --avila-space-3-5: 14px;
+  --avila-radius-none: 0px;
+  --avila-radius-xs: 2px;
+  --avila-radius-sm: 4px;
+  --avila-radius-md: 6px;
+  --avila-radius-lg: 8px;
+  --avila-radius-xl: 12px;
+  --avila-radius-2xl: 16px;
+  --avila-radius-3xl: 24px;
+  --avila-radius-full: 9999px; /** Pill */
+  --avila-height-xs: 28px; /** Chip, badge, compact */
+  --avila-height-sm: 36px; /** Compact input, tag */
+  --avila-height-md: 44px; /** Default input, button */
+  --avila-height-lg: 52px; /** Large CTA button */
+  --avila-height-xl: 64px; /** XL component */
+  --avila-icon-xs: 12px; /** Icon XS */
+  --avila-icon-sm: 16px; /** Icon SM */
+  --avila-icon-md: 20px; /** Icon MD — default */
+  --avila-icon-lg: 24px; /** Icon LG */
+  --avila-icon-xl: 32px; /** Icon XL */
+  --avila-container-sm: 640px; /** Small container */
+  --avila-container-md: 768px; /** Medium container */
+  --avila-container-lg: 1024px; /** Large container */
+  --avila-container-xl: 1280px; /** XL — portfolio default */
+  --avila-container-2xl: 1440px; /** Full bleed */
+  --avila-grid-columns: 12; /** 12-column grid */
+  --avila-grid-gutter: 24px; /** Column gutter */
+  --avila-grid-margin: 80px; /** Outer margin */
+  --avila-z-hide: -1; /** Hidden */
+  --avila-z-base: 0; /** Default flow */
+  --avila-z-raised: 10; /** Cards, hover */
+  --avila-z-dropdown: 100; /** Dropdowns */
+  --avila-z-sticky: 200; /** Sticky nav */
+  --avila-z-overlay: 300; /** Overlays */
+  --avila-z-modal: 400; /** Modals */
+  --avila-z-toast: 500; /** Toasts */
+  --avila-z-tooltip: 600; /** Tooltips */
+  --avila-fs-2xs: 10px; /** Micro label, timestamp */
+  --avila-fs-xs: 11px; /** Caption, footnote */
+  --avila-fs-sm: 12px; /** Small label, badge */
+  --avila-fs-base: 14px; /** Base body text — callout tags */
+  --avila-fs-md: 16px; /** Body MD — descriptions */
+  --avila-fs-lg: 18px; /** Body LG — intro paragraphs */
+  --avila-fs-xl: 20px; /** Body XL — lead copy */
+  --avila-fs-2xl: 24px; /** H4 / sub-heading */
+  --avila-fs-3xl: 28px; /** H3 */
+  --avila-fs-4xl: 32px; /** H2 */
+  --avila-fs-5xl: 40px; /** H1 */
+  --avila-fs-6xl: 48px; /** Display SM */
+  --avila-fs-7xl: 56px; /** Display MD */
+  --avila-fs-8xl: 72px; /** Display LG — section title */
+  --avila-fs-9xl: 96px; /** Display XL — hero headline */
+  --avila-fs-10xl: 112px; /** Display 2XL — mega hero */
+  --avila-lh-none: 1; /** 1:1 — display, all-caps labels */
+  --avila-lh-tight: 1.1; /** Tight — large display headings */
+  --avila-lh-snug: 1.25; /** Snug — subheadings */
+  --avila-lh-normal: 1.5; /** Normal — body copy default */
+  --avila-lh-relaxed: 1.625; /** Relaxed — long-form paragraphs */
+  --avila-lh-loose: 2; /** Loose — editorial / airy layouts */
+  --avila-ls-tighter: -1.5px; /** Very tight — large display only */
+  --avila-ls-tight: -0.5px; /** Tight — hero headlines */
+  --avila-ls-snug: -0.25px; /** Slightly tight — subheadings */
+  --avila-ls-normal: 0px; /** Normal — body copy */
+  --avila-ls-wide: 0.3px; /** Wide — Oswald body/UI */
+  --avila-ls-wider: 1px; /** Wider — labels, small caps */
+  --avila-ls-widest: 1.5px; /** Widest — Bebas Neue chips, overlines */
+  --avila-ls-ultra: 2px; /** Ultra wide — Bebas Neue display */
+  --avila-ls-tracking: 3px; /** Tracking — eyebrow / section eyebrow */
+  --avila-fw-thin: 100; /** Thin */
+  --avila-fw-extralight: 200; /** Extra Light */
+  --avila-fw-light: 300; /** Light */
+  --avila-fw-regular: 400; /** Regular — Oswald body */
+  --avila-fw-medium: 500; /** Medium */
+  --avila-fw-semibold: 600; /** SemiBold */
+  --avila-fw-bold: 700; /** Bold */
+  --avila-fw-extrabold: 800; /** Extra Bold */
+  --avila-fw-black: 900; /** Black / Heavy */
+  --avila-para-none: 0px; /** No paragraph spacing */
+  --avila-para-xs: 4px; /** Tight — dense UI lists */
+  --avila-para-sm: 8px; /** Small — compact body */
+  --avila-para-md: 12px; /** Medium — default body */
+  --avila-para-lg: 16px; /** Large — editorial spacing */
+  --avila-para-xl: 24px; /** XL — feature copy */
+  --avila-role-display-hero: 112px; /** Hero headline — 9xl equiv */
+  --avila-role-display-xl: 96px; /** Display XL */
+  --avila-role-display-lg: 72px; /** Display LG */
+  --avila-role-display-md: 56px; /** Display MD — section title */
+  --avila-role-display-sm: 40px; /** Display SM */
+  --avila-role-heading-h1: 32px; /** H1 */
+  --avila-role-heading-h2: 28px; /** H2 */
+  --avila-role-heading-h3: 24px; /** H3 */
+  --avila-role-heading-h4: 20px; /** H4 */
+  --avila-role-heading-h5: 18px; /** H5 */
+  --avila-role-metric-xl: 72px; /** KPI metric XL */
+  --avila-role-metric-lg: 56px; /** KPI metric LG */
+  --avila-role-metric-md: 40px; /** KPI metric MD */
+  --avila-role-metric-sm: 32px; /** KPI metric SM */
+  --avila-role-body-xl: 20px; /** Body XL — lead copy */
+  --avila-role-body-lg: 18px; /** Body LG — standard */
+  --avila-role-body-md: 16px; /** Body MD */
+  --avila-role-body-sm: 14px; /** Body SM — descriptions */
+  --avila-role-body-xs: 12px; /** Body XS — captions */
+  --avila-role-label-lg: 16px; /** Label LG */
+  --avila-role-label-md: 14px; /** Label MD — chips, buttons */
+  --avila-role-label-sm: 12px; /** Label SM — badges */
+  --avila-role-label-xs: 10px; /** Label XS — micro UI */
+  --avila-role-overline-lg: 13px; /** Overline LG — section eyebrow */
+  --avila-role-overline-md: 11px; /** Overline MD */
+  --avila-role-overline-sm: 9px; /** Overline SM */
+  --avila-role-sublabel-md: 12px; /** Sublabel — metric label, caption */
+  --avila-role-sublabel-sm: 11px; /** Sublabel SM */
+  --avila-opacity-0: 0;
+  --avila-opacity-5: 0.05;
+  --avila-opacity-10: 0.1;
+  --avila-opacity-15: 0.15;
+  --avila-opacity-20: 0.2;
+  --avila-opacity-30: 0.3;
+  --avila-opacity-40: 0.4;
+  --avila-opacity-50: 0.5;
+  --avila-opacity-60: 0.6;
+  --avila-opacity-70: 0.7;
+  --avila-opacity-80: 0.8;
+  --avila-opacity-90: 0.9;
+  --avila-opacity-100: 1;
+  --avila-duration-instant: 0ms; /** 0ms */
+  --avila-duration-fast: 75ms; /** 75ms */
+  --avila-duration-snappy: 100ms; /** 100ms */
+  --avila-duration-base: 150ms; /** 150ms */
+  --avila-duration-moderate: 200ms; /** 200ms */
+  --avila-duration-slow: 300ms; /** 300ms */
+  --avila-duration-slower: 400ms; /** 400ms */
+  --avila-duration-sluggish: 500ms; /** 500ms */
+  --avila-shadow-none: 0px;
+  --avila-shadow-xs: 2px;
+  --avila-shadow-sm: 4px;
+  --avila-shadow-md: 8px;
+  --avila-shadow-lg: 16px;
+  --avila-shadow-xl: 24px;
+  --avila-shadow-2xl: 40px;
+  --avila-shadow-3xl: 64px;
+  --avila-bp-xs: 320px; /** 320px */
+  --avila-bp-sm: 480px; /** 480px */
+  --avila-bp-md: 768px; /** 768px */
+  --avila-bp-lg: 1024px; /** 1024px */
+  --avila-bp-xl: 1280px; /** 1280px */
+  --avila-bp-2xl: 1440px; /** 1440px */
+  --avila-bp-3xl: 1920px; /** 1920px */
+  --avila-color-card-shadow: rgba(26, 18, 8, 0.08); /** Card shadow color */
+  --avila-color-background-page: var(--avila-primitive-color-off-white); /** Main page background */
+  --avila-color-background-surface: var(--avila-primitive-color-parchment); /** Card / panel surface */
+  --avila-color-background-surface-raised: var(--avila-primitive-color-white); /** Elevated modal / dropdown */
+  --avila-color-background-surface-sunken: var(--avila-primitive-color-ink-05); /** Inset / input background */
+  --avila-color-background-overlay: var(--avila-primitive-color-ink-100); /** Modal scrim */
+  --avila-color-text-primary: var(--avila-primitive-color-ink-100); /** Primary body text */
+  --avila-color-text-secondary: var(--avila-primitive-color-ink-80); /** Secondary / caption text */
+  --avila-color-text-muted: var(--avila-primitive-color-ink-50); /** Placeholder, disabled text */
+  --avila-color-text-inverse: var(--avila-primitive-color-parchment); /** Text on dark / colored surfaces */
+  --avila-color-text-accent: var(--avila-primitive-color-hot-pink); /** Highlighted / brand text */
+  --avila-color-text-link: var(--avila-primitive-color-hot-pink); /** Hyperlinks */
+  --avila-color-text-link-hover: var(--avila-primitive-color-hot-pink-hover); /** Link hover */
+  --avila-color-text-on-accent: var(--avila-primitive-color-parchment); /** Text sitting on accent bg */
+  --avila-color-border-default: var(--avila-primitive-color-parchment-dark); /** Default card / input border */
+  --avila-color-border-strong: var(--avila-primitive-color-ink-30); /** Strong border, separator */
+  --avila-color-border-focus: var(--avila-primitive-color-hot-pink); /** Focus ring */
+  --avila-color-border-accent: var(--avila-primitive-color-marigold); /** Accent / brand border */
+  --avila-color-interactive-primary-bg: var(--avila-primitive-color-hot-pink); /** Primary button bg */
+  --avila-color-interactive-primary-bg-hover: var(--avila-primitive-color-hot-pink-hover); /** Primary button hover */
+  --avila-color-interactive-primary-bg-active: var(--avila-primitive-color-hot-pink-active); /** Primary button active/pressed */
+  --avila-color-interactive-primary-text: var(--avila-primitive-color-parchment); /** Primary button label */
+  --avila-color-interactive-secondary-bg: var(--avila-primitive-color-ink-100); /** Secondary button bg */
+  --avila-color-interactive-secondary-text: var(--avila-primitive-color-parchment); /** Secondary button label */
+  --avila-color-interactive-ghost-text: var(--avila-primitive-color-hot-pink); /** Ghost button label */
+  --avila-color-interactive-ghost-border: var(--avila-primitive-color-hot-pink); /** Ghost button border */
+  --avila-color-accent-hot-pink: var(--avila-primitive-color-hot-pink); /** Hot Pink accent */
+  --avila-color-accent-hot-pink-subtle: var(--avila-primitive-color-hot-pink-subtle); /** Hot Pink tint bg */
+  --avila-color-accent-marigold: var(--avila-primitive-color-marigold); /** Marigold accent */
+  --avila-color-accent-marigold-subtle: var(--avila-primitive-color-marigold-subtle); /** Marigold tint bg */
+  --avila-color-accent-cobalt: var(--avila-primitive-color-cobalt); /** Cobalt accent */
+  --avila-color-accent-cobalt-subtle: var(--avila-primitive-color-cobalt-subtle); /** Cobalt tint bg */
+  --avila-color-accent-teal: var(--avila-primitive-color-teal); /** Teal accent */
+  --avila-color-accent-teal-subtle: var(--avila-primitive-color-teal-subtle); /** Teal tint bg */
+  --avila-color-feedback-success-bg: var(--avila-primitive-color-success-subtle); /** Success background */
+  --avila-color-feedback-success-text: var(--avila-primitive-color-success-base); /** Success text/icon */
+  --avila-color-feedback-warning-bg: var(--avila-primitive-color-warning-subtle); /** Warning background */
+  --avila-color-feedback-warning-text: var(--avila-primitive-color-warning-base); /** Warning text/icon */
+  --avila-color-feedback-error-bg: var(--avila-primitive-color-error-subtle); /** Error background */
+  --avila-color-feedback-error-text: var(--avila-primitive-color-error-base); /** Error text/icon */
+  --avila-color-feedback-info-bg: var(--avila-primitive-color-info-subtle); /** Info background */
+  --avila-color-feedback-info-text: var(--avila-primitive-color-info-base); /** Info text/icon */
+  --avila-color-nav-bg: var(--avila-primitive-color-ink-100); /** Nav background — always dark */
+  --avila-color-nav-text: var(--avila-primitive-color-parchment); /** Nav link text */
+  --avila-color-nav-text-muted: var(--avila-primitive-color-ink-50); /** Inactive nav links */
+  --avila-color-nav-border: var(--avila-primitive-color-ink-90); /** Nav bottom border */
+  --avila-color-nav-cta-bg: var(--avila-primitive-color-hot-pink); /** Nav CTA button */
+  --avila-color-nav-cta-text: var(--avila-primitive-color-parchment); /** Nav CTA label */
+  --avila-color-card-bg-light: var(--avila-primitive-color-white); /** Default card background */
+  --avila-color-card-bg-dark: var(--avila-primitive-color-ink-100); /** Dark card variant */
+  --avila-color-card-border: var(--avila-primitive-color-parchment-dark); /** Card border */
+  --avila-color-metric-value: var(--avila-primitive-color-marigold); /** Metric / KPI number color */
+  --avila-color-chip-text: var(--avila-primitive-color-ink-100); /** Chip / tag text */
+  --avila-color-rainbow-hot-pink: var(--avila-primitive-color-hot-pink);
+  --avila-color-rainbow-marigold: var(--avila-primitive-color-marigold);
+  --avila-color-rainbow-cobalt: var(--avila-primitive-color-cobalt);
+  --avila-color-rainbow-teal: var(--avila-primitive-color-teal);
+}

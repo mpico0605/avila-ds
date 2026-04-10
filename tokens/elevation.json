@@ -1,0 +1,12 @@
+{
+  "shadow": {
+    "none": { "$value": "0px",  "$type": "other" },
+    "xs":   { "$value": "2px",  "$type": "other" },
+    "sm":   { "$value": "4px",  "$type": "other" },
+    "md":   { "$value": "8px",  "$type": "other" },
+    "lg":   { "$value": "16px", "$type": "other" },
+    "xl":   { "$value": "24px", "$type": "other" },
+    "2xl":  { "$value": "40px", "$type": "other" },
+    "3xl":  { "$value": "64px", "$type": "other" }
+  }
+}

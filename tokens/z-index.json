@@ -1,0 +1,13 @@
+{
+  "z": {
+    "hide":     { "$value": "-1",  "$type": "other", "$description": "Hidden" },
+    "base":     { "$value": "0",   "$type": "other", "$description": "Default flow" },
+    "raised":   { "$value": "10",  "$type": "other", "$description": "Cards, hover" },
+    "dropdown": { "$value": "100", "$type": "other", "$description": "Dropdowns" },
+    "sticky":   { "$value": "200", "$type": "other", "$description": "Sticky nav" },
+    "overlay":  { "$value": "300", "$type": "other", "$description": "Overlays" },
+    "modal":    { "$value": "400", "$type": "other", "$description": "Modals" },
+    "toast":    { "$value": "500", "$type": "other", "$description": "Toasts" },
+    "tooltip":  { "$value": "600", "$type": "other", "$description": "Tooltips" }
+  }
+}

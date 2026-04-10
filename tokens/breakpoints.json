@@ -1,0 +1,11 @@
+{
+  "bp": {
+    "xs":  { "$value": "320px",  "$type": "other", "$description": "320px" },
+    "sm":  { "$value": "480px",  "$type": "other", "$description": "480px" },
+    "md":  { "$value": "768px",  "$type": "other", "$description": "768px" },
+    "lg":  { "$value": "1024px", "$type": "other", "$description": "1024px" },
+    "xl":  { "$value": "1280px", "$type": "other", "$description": "1280px" },
+    "2xl": { "$value": "1440px", "$type": "other", "$description": "1440px" },
+    "3xl": { "$value": "1920px", "$type": "other", "$description": "1920px" }
+  }
+}

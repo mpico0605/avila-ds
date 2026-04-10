@@ -1,0 +1,12 @@
+{
+  "duration": {
+    "instant":  { "$value": "0ms",   "$type": "duration", "$description": "0ms" },
+    "fast":     { "$value": "75ms",  "$type": "duration", "$description": "75ms" },
+    "snappy":   { "$value": "100ms", "$type": "duration", "$description": "100ms" },
+    "base":     { "$value": "150ms", "$type": "duration", "$description": "150ms" },
+    "moderate": { "$value": "200ms", "$type": "duration", "$description": "200ms" },
+    "slow":     { "$value": "300ms", "$type": "duration", "$description": "300ms" },
+    "slower":   { "$value": "400ms", "$type": "duration", "$description": "400ms" },
+    "sluggish": { "$value": "500ms", "$type": "duration", "$description": "500ms" }
+  }
+}

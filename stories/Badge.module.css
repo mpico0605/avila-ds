@@ -1,0 +1,129 @@
+/* ─── AvilaDS Badge ─────────────────────────────────────────────────────────
+   All values reference --avila-* CSS custom properties.
+─────────────────────────────────────────────────────────────────────────── */
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--avila-space-1);
+  border-radius: 0; /* sharp — Figma default */
+  font-family: 'Bebas Neue', sans-serif;
+  font-weight: var(--avila-fw-regular);
+  letter-spacing: var(--avila-ls-widest);
+  text-transform: uppercase;
+  line-height: 1;
+  white-space: nowrap;
+  border: 1px solid transparent;
+}
+
+/* ── Sizes ──────────────────────────────────────────────────────────────── */
+.size-sm {
+  height: 20px;
+  padding: 0 var(--avila-space-1-5);
+  font-size: var(--avila-role-label-xs);
+}
+
+.size-md {
+  height: var(--avila-height-xs); /* 28px */
+  padding: 0 var(--avila-space-2);
+  font-size: var(--avila-role-label-sm);
+}
+
+/* ── Dot ────────────────────────────────────────────────────────────────── */
+.dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  flex-shrink: 0;
+  background-color: currentColor;
+}
+
+/* ─────────────────────────────────────────────────────────────────────────
+   Brand accent variants — solid fill
+───────────────────────────────────────────────────────────────────────── */
+.variant-hot-pink {
+  background-color: var(--avila-color-accent-hot-pink);
+  color: var(--avila-color-text-inverse);
+}
+
+.variant-marigold {
+  background-color: var(--avila-color-accent-marigold);
+  color: var(--avila-primitive-color-ink-100);
+}
+
+.variant-cobalt {
+  background-color: var(--avila-color-accent-cobalt);
+  color: var(--avila-color-text-inverse);
+}
+
+.variant-teal {
+  background-color: var(--avila-color-accent-teal);
+  color: var(--avila-primitive-color-ink-100);
+}
+
+/* ── Subtle (tint bg + colored text) ────────────────────────────────────── */
+.variant-hot-pink-subtle {
+  background-color: var(--avila-color-accent-hot-pink-subtle);
+  color: var(--avila-color-accent-hot-pink);
+  border-color: var(--avila-color-accent-hot-pink);
+}
+
+.variant-marigold-subtle {
+  background-color: var(--avila-color-accent-marigold-subtle);
+  color: var(--avila-primitive-color-marigold-hover);
+  border-color: var(--avila-color-accent-marigold);
+}
+
+.variant-cobalt-subtle {
+  background-color: var(--avila-color-accent-cobalt-subtle);
+  color: var(--avila-color-accent-cobalt);
+  border-color: var(--avila-color-accent-cobalt);
+}
+
+.variant-teal-subtle {
+  background-color: var(--avila-color-accent-teal-subtle);
+  color: var(--avila-primitive-color-teal-hover);
+  border-color: var(--avila-color-accent-teal);
+}
+
+/* ── Feedback variants ───────────────────────────────────────────────────── */
+.variant-success {
+  background-color: var(--avila-color-feedback-success-bg);
+  color: var(--avila-color-feedback-success-text);
+  border-color: var(--avila-color-feedback-success-text);
+}
+
+.variant-warning {
+  background-color: var(--avila-color-feedback-warning-bg);
+  color: var(--avila-color-feedback-warning-text);
+  border-color: var(--avila-color-feedback-warning-text);
+}
+
+.variant-error {
+  background-color: var(--avila-color-feedback-error-bg);
+  color: var(--avila-color-feedback-error-text);
+  border-color: var(--avila-color-feedback-error-text);
+}
+
+.variant-info {
+  background-color: var(--avila-color-feedback-info-bg);
+  color: var(--avila-color-feedback-info-text);
+  border-color: var(--avila-color-feedback-info-text);
+}
+
+/* ── Neutral ─────────────────────────────────────────────────────────────── */
+.variant-neutral {
+  background-color: var(--avila-primitive-color-ink-10);
+  color: var(--avila-color-text-secondary);
+  border-color: var(--avila-primitive-color-ink-20);
+}
+
+.variant-dark {
+  background-color: var(--avila-color-card-bg-dark);
+  color: var(--avila-color-text-inverse);
+}
+
+/* ── Pill shape modifier ─────────────────────────────────────────────────── */
+.pill {
+  border-radius: var(--avila-radius-full);
+}

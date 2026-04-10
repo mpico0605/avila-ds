@@ -1,0 +1,28 @@
+{
+  "height": {
+    "xs": { "$value": "28px", "$type": "sizing", "$description": "Chip, badge, compact" },
+    "sm": { "$value": "36px", "$type": "sizing", "$description": "Compact input, tag" },
+    "md": { "$value": "44px", "$type": "sizing", "$description": "Default input, button" },
+    "lg": { "$value": "52px", "$type": "sizing", "$description": "Large CTA button" },
+    "xl": { "$value": "64px", "$type": "sizing", "$description": "XL component" }
+  },
+  "icon": {
+    "xs": { "$value": "12px", "$type": "sizing", "$description": "Icon XS" },
+    "sm": { "$value": "16px", "$type": "sizing", "$description": "Icon SM" },
+    "md": { "$value": "20px", "$type": "sizing", "$description": "Icon MD — default" },
+    "lg": { "$value": "24px", "$type": "sizing", "$description": "Icon LG" },
+    "xl": { "$value": "32px", "$type": "sizing", "$description": "Icon XL" }
+  },
+  "container": {
+    "sm":  { "$value": "640px",  "$type": "sizing", "$description": "Small container" },
+    "md":  { "$value": "768px",  "$type": "sizing", "$description": "Medium container" },
+    "lg":  { "$value": "1024px", "$type": "sizing", "$description": "Large container" },
+    "xl":  { "$value": "1280px", "$type": "sizing", "$description": "XL — portfolio default" },
+    "2xl": { "$value": "1440px", "$type": "sizing", "$description": "Full bleed" }
+  },
+  "grid": {
+    "columns": { "$value": "12",   "$type": "other",   "$description": "12-column grid" },
+    "gutter":  { "$value": "24px", "$type": "spacing",  "$description": "Column gutter" },
+    "margin":  { "$value": "80px", "$type": "spacing",  "$description": "Outer margin" }
+  }
+}

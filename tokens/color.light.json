@@ -1,0 +1,83 @@
+{
+  "color": {
+    "background": {
+      "page":            { "$value": "{primitive.color.off-white}",    "$type": "color", "$description": "Main page background" },
+      "surface":         { "$value": "{primitive.color.parchment}",    "$type": "color", "$description": "Card / panel surface" },
+      "surface-raised":  { "$value": "{primitive.color.white}",        "$type": "color", "$description": "Elevated modal / dropdown" },
+      "surface-sunken":  { "$value": "{primitive.color.ink-05}",       "$type": "color", "$description": "Inset / input background" },
+      "overlay":         { "$value": "{primitive.color.ink-100}",      "$type": "color", "$description": "Modal scrim" }
+    },
+    "text": {
+      "primary":   { "$value": "{primitive.color.ink-100}",   "$type": "color", "$description": "Primary body text" },
+      "secondary": { "$value": "{primitive.color.ink-80}",    "$type": "color", "$description": "Secondary / caption text" },
+      "muted":     { "$value": "{primitive.color.ink-50}",    "$type": "color", "$description": "Placeholder, disabled text" },
+      "inverse":   { "$value": "{primitive.color.parchment}", "$type": "color", "$description": "Text on dark / colored surfaces" },
+      "accent":    { "$value": "{primitive.color.hot-pink}",  "$type": "color", "$description": "Highlighted / brand text" },
+      "link":      { "$value": "{primitive.color.hot-pink}",  "$type": "color", "$description": "Hyperlinks" },
+      "link-hover":{ "$value": "{primitive.color.hot-pink-hover}", "$type": "color", "$description": "Link hover" },
+      "on-accent": { "$value": "{primitive.color.parchment}", "$type": "color", "$description": "Text sitting on accent bg" }
+    },
+    "border": {
+      "default": { "$value": "{primitive.color.parchment-dark}", "$type": "color", "$description": "Default card / input border" },
+      "strong":  { "$value": "{primitive.color.ink-30}",         "$type": "color", "$description": "Strong border, separator" },
+      "focus":   { "$value": "{primitive.color.hot-pink}",       "$type": "color", "$description": "Focus ring" },
+      "accent":  { "$value": "{primitive.color.marigold}",       "$type": "color", "$description": "Accent / brand border" }
+    },
+    "interactive": {
+      "primary-bg":      { "$value": "{primitive.color.hot-pink}",       "$type": "color", "$description": "Primary button bg" },
+      "primary-bg-hover":{ "$value": "{primitive.color.hot-pink-hover}", "$type": "color", "$description": "Primary button hover" },
+      "primary-bg-active":{"$value": "{primitive.color.hot-pink-active}","$type": "color", "$description": "Primary button active/pressed" },
+      "primary-text":    { "$value": "{primitive.color.parchment}",      "$type": "color", "$description": "Primary button label" },
+      "secondary-bg":    { "$value": "{primitive.color.ink-100}",        "$type": "color", "$description": "Secondary button bg" },
+      "secondary-text":  { "$value": "{primitive.color.parchment}",      "$type": "color", "$description": "Secondary button label" },
+      "ghost-text":      { "$value": "{primitive.color.hot-pink}",       "$type": "color", "$description": "Ghost button label" },
+      "ghost-border":    { "$value": "{primitive.color.hot-pink}",       "$type": "color", "$description": "Ghost button border" }
+    },
+    "accent": {
+      "hot-pink":       { "$value": "{primitive.color.hot-pink}",       "$type": "color", "$description": "Hot Pink accent" },
+      "hot-pink-subtle":{ "$value": "{primitive.color.hot-pink-subtle}", "$type": "color", "$description": "Hot Pink tint bg" },
+      "marigold":       { "$value": "{primitive.color.marigold}",       "$type": "color", "$description": "Marigold accent" },
+      "marigold-subtle":{ "$value": "{primitive.color.marigold-subtle}", "$type": "color", "$description": "Marigold tint bg" },
+      "cobalt":         { "$value": "{primitive.color.cobalt}",         "$type": "color", "$description": "Cobalt accent" },
+      "cobalt-subtle":  { "$value": "{primitive.color.cobalt-subtle}",  "$type": "color", "$description": "Cobalt tint bg" },
+      "teal":           { "$value": "{primitive.color.teal}",           "$type": "color", "$description": "Teal accent" },
+      "teal-subtle":    { "$value": "{primitive.color.teal-subtle}",    "$type": "color", "$description": "Teal tint bg" }
+    },
+    "feedback": {
+      "success-bg":   { "$value": "{primitive.color.success-subtle}", "$type": "color", "$description": "Success background" },
+      "success-text": { "$value": "{primitive.color.success-base}",   "$type": "color", "$description": "Success text/icon" },
+      "warning-bg":   { "$value": "{primitive.color.warning-subtle}", "$type": "color", "$description": "Warning background" },
+      "warning-text": { "$value": "{primitive.color.warning-base}",   "$type": "color", "$description": "Warning text/icon" },
+      "error-bg":     { "$value": "{primitive.color.error-subtle}",   "$type": "color", "$description": "Error background" },
+      "error-text":   { "$value": "{primitive.color.error-base}",     "$type": "color", "$description": "Error text/icon" },
+      "info-bg":      { "$value": "{primitive.color.info-subtle}",    "$type": "color", "$description": "Info background" },
+      "info-text":    { "$value": "{primitive.color.info-base}",      "$type": "color", "$description": "Info text/icon" }
+    },
+    "nav": {
+      "bg":       { "$value": "{primitive.color.ink-100}",  "$type": "color", "$description": "Nav background — always dark" },
+      "text":     { "$value": "{primitive.color.parchment}", "$type": "color", "$description": "Nav link text" },
+      "text-muted":{ "$value": "{primitive.color.ink-50}",  "$type": "color", "$description": "Inactive nav links" },
+      "border":   { "$value": "{primitive.color.ink-90}",   "$type": "color", "$description": "Nav bottom border" },
+      "cta-bg":   { "$value": "{primitive.color.hot-pink}", "$type": "color", "$description": "Nav CTA button" },
+      "cta-text": { "$value": "{primitive.color.parchment}", "$type": "color", "$description": "Nav CTA label" }
+    },
+    "card": {
+      "bg-light": { "$value": "{primitive.color.white}",        "$type": "color", "$description": "Default card background" },
+      "bg-dark":  { "$value": "{primitive.color.ink-100}",      "$type": "color", "$description": "Dark card variant" },
+      "border":   { "$value": "{primitive.color.parchment-dark}","$type": "color", "$description": "Card border" },
+      "shadow":   { "$value": "#1a120814",                       "$type": "color", "$description": "Card shadow color" }
+    },
+    "metric": {
+      "value": { "$value": "{primitive.color.marigold}", "$type": "color", "$description": "Metric / KPI number color" }
+    },
+    "chip": {
+      "text": { "$value": "{primitive.color.ink-100}", "$type": "color", "$description": "Chip / tag text" }
+    },
+    "rainbow": {
+      "hot-pink": { "$value": "{primitive.color.hot-pink}", "$type": "color" },
+      "marigold":  { "$value": "{primitive.color.marigold}", "$type": "color" },
+      "cobalt":    { "$value": "{primitive.color.cobalt}",   "$type": "color" },
+      "teal":      { "$value": "{primitive.color.teal}",     "$type": "color" }
+    }
+  }
+}

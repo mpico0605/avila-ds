@@ -1,0 +1,152 @@
+/* ─── AvilaDS Input ─────────────────────────────────────────────────────────
+   All values reference --avila-* CSS custom properties.
+─────────────────────────────────────────────────────────────────────────── */
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: var(--avila-space-1-5);
+  width: 100%;
+}
+
+/* ── Label ──────────────────────────────────────────────────────────────── */
+.label {
+  font-size: var(--avila-role-label-md);
+  font-weight: var(--avila-fw-semibold);
+  color: var(--avila-color-text-primary);
+  line-height: var(--avila-lh-snug);
+  letter-spacing: var(--avila-ls-wide);
+}
+
+.required {
+  color: var(--avila-color-text-accent);
+  margin-left: 2px;
+}
+
+/* ── Input container (icon support) ─────────────────────────────────────── */
+.inputContainer {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.leadingIcon,
+.trailingIcon {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  align-items: center;
+  pointer-events: none;
+  color: var(--avila-color-text-muted);
+  width: var(--avila-icon-sm);
+  height: var(--avila-icon-sm);
+}
+
+.leadingIcon  { left: var(--avila-space-3); }
+.trailingIcon { right: var(--avila-space-3); }
+
+/* ── Base input ──────────────────────────────────────────────────────────── */
+.input {
+  width: 100%;
+  border: 1.5px solid var(--avila-color-border-default);
+  border-radius: 0; /* sharp — matches Figma */
+  background-color: var(--avila-color-background-surface-sunken);
+  color: var(--avila-color-text-primary);
+  font-size: var(--avila-role-body-sm);
+  font-family: inherit;
+  line-height: var(--avila-lh-normal);
+  transition:
+    border-color var(--avila-duration-base, 150ms) ease,
+    background-color var(--avila-duration-base, 150ms) ease,
+    box-shadow var(--avila-duration-base, 150ms) ease;
+  outline: none;
+  box-sizing: border-box;
+}
+
+.input::placeholder {
+  color: var(--avila-color-text-muted);
+}
+
+.input:hover:not(:disabled) {
+  border-color: var(--avila-color-border-strong);
+}
+
+.input:focus:not(:disabled) {
+  border-color: var(--avila-color-border-focus);
+  box-shadow: 0 0 0 3px var(--avila-primitive-color-hot-pink-subtle);
+  background-color: var(--avila-color-background-surface-raised);
+}
+
+/* ── Sizes ──────────────────────────────────────────────────────────────── */
+.size-sm {
+  height: var(--avila-height-sm);
+  padding: 0 var(--avila-space-3);
+  font-size: var(--avila-role-body-xs);
+}
+
+.size-md {
+  height: var(--avila-height-md);
+  padding: 0 var(--avila-space-4);
+  font-size: var(--avila-role-body-sm);
+}
+
+.size-lg {
+  height: var(--avila-height-lg);
+  padding: 0 var(--avila-space-5);
+  font-size: var(--avila-role-body-md);
+}
+
+/* Icon padding compensation */
+.hasLeadingIcon.size-sm  { padding-left: calc(var(--avila-space-3) + var(--avila-icon-sm) + var(--avila-space-1-5)); }
+.hasLeadingIcon.size-md  { padding-left: calc(var(--avila-space-4) + var(--avila-icon-sm) + var(--avila-space-2)); }
+.hasLeadingIcon.size-lg  { padding-left: calc(var(--avila-space-5) + var(--avila-icon-sm) + var(--avila-space-2)); }
+
+.hasTrailingIcon.size-sm  { padding-right: calc(var(--avila-space-3) + var(--avila-icon-sm) + var(--avila-space-1-5)); }
+.hasTrailingIcon.size-md  { padding-right: calc(var(--avila-space-4) + var(--avila-icon-sm) + var(--avila-space-2)); }
+.hasTrailingIcon.size-lg  { padding-right: calc(var(--avila-space-5) + var(--avila-icon-sm) + var(--avila-space-2)); }
+
+/* ── Status variants ─────────────────────────────────────────────────────── */
+.status-error {
+  border-color: var(--avila-color-feedback-error-text);
+}
+
+.status-error:focus {
+  border-color: var(--avila-color-feedback-error-text);
+  box-shadow: 0 0 0 3px var(--avila-color-feedback-error-bg);
+}
+
+.status-success {
+  border-color: var(--avila-color-feedback-success-text);
+}
+
+.status-success:focus {
+  border-color: var(--avila-color-feedback-success-text);
+  box-shadow: 0 0 0 3px var(--avila-color-feedback-success-bg);
+}
+
+/* ── Disabled ────────────────────────────────────────────────────────────── */
+.input:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+  background-color: var(--avila-primitive-color-ink-10);
+}
+
+/* ── Helper / error text ─────────────────────────────────────────────────── */
+.helperText {
+  font-size: var(--avila-role-body-xs);
+  color: var(--avila-color-text-muted);
+  line-height: var(--avila-lh-normal);
+}
+
+.errorText {
+  font-size: var(--avila-role-body-xs);
+  color: var(--avila-color-feedback-error-text);
+  line-height: var(--avila-lh-normal);
+}
+
+.successText {
+  font-size: var(--avila-role-body-xs);
+  color: var(--avila-color-feedback-success-text);
+  line-height: var(--avila-lh-normal);
+}

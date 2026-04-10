@@ -1,0 +1,30 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm install:*)",
+      "Read(//usr/local/bin/**)",
+      "Read(//Users/picojr/.nvm/versions/**)",
+      "Read(//opt/homebrew/bin/**)",
+      "Read(//Users/picojr/**)",
+      "Bash(/opt/homebrew/bin/brew install:*)",
+      "Bash(npm run:*)",
+      "Bash(export PATH=\"/opt/homebrew/bin:/usr/local/bin:$PATH\")",
+      "Bash(node -e \"const SD = require\\('style-dictionary'\\); console.log\\(typeof SD\\); console.log\\(Object.keys\\(SD\\)\\);\")",
+      "Bash(npx storybook@8 init --type react --builder vite --no-dev)",
+      "Bash(npx storybook@8 build --quiet)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" http://localhost:6006)",
+      "Bash(node -e ':*)",
+      "Bash(ls /usr/local/bin/node*)",
+      "Bash(ls /opt/homebrew/bin/node*)",
+      "Bash(/opt/homebrew/bin/node -e ':*)",
+      "Bash(node scripts/build-tokens.js)",
+      "Bash(ls /Users/picojr/Documents/NPM-Projects/AvilaDS-StoryBook/*.json)",
+      "Bash(pkill -f \"storybook dev\")",
+      "mcp__Claude_Preview__preview_start",
+      "Bash(xattr ~/Documents)",
+      "Bash(mkdir -p ~/dev)",
+      "Bash(mv ~/Documents/NPM-Projects/AvilaDS-StoryBook ~/dev/AvilaDS-StoryBook)",
+      "Bash(brctl dump:*)"
+    ]
+  }
+}

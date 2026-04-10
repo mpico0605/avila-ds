@@ -1,0 +1,247 @@
+{
+  "_meta": {
+    "source": "Figma — AVILA UI Design System",
+    "purpose": "Token descriptions for Storybook docs and design guidelines"
+  },
+  "color": {
+    "brand": {
+      "hot-pink":  "Primary accent · section chips · CTAs",
+      "marigold":  "Metrics · highlights · Marigold tags",
+      "cobalt":    "Cobalt callout tags · links · info",
+      "teal":      "Teal callout tags · success · scope",
+      "ink":       "Primary text · dark backgrounds",
+      "parchment": "Light background · inverse text"
+    },
+    "extended": {
+      "hot-pink-light": "Hover on hot pink",
+      "hot-pink-dark":  "Active / pressed hot pink",
+      "hot-pink-tint":  "Hot pink surface tint",
+      "marigold-light": "Lighter marigold",
+      "marigold-tint":  "Marigold surface tint",
+      "cobalt-light":   "Lighter cobalt",
+      "cobalt-tint":    "Cobalt surface tint — 12% alpha",
+      "teal-light":     "Lighter teal",
+      "teal-tint":      "Teal surface tint — 10% alpha",
+      "ink-55":         "55% ink — muted labels, sub-text",
+      "ink-light":      "Slightly lighter ink",
+      "parchment-dark": "Parchment border / divider",
+      "off-white":      "Surface / page background"
+    },
+    "semantic": {
+      "background": {
+        "page":           "Main page background",
+        "surface":        "Card / panel surface",
+        "surface-raised": "Elevated modal / dropdown",
+        "surface-sunken": "Inset / input background",
+        "overlay":        "Modal scrim"
+      },
+      "text": {
+        "primary":   "Primary body text",
+        "secondary": "Secondary / caption text",
+        "muted":     "Placeholder, disabled text",
+        "inverse":   "Text on dark / colored surfaces",
+        "accent":    "Highlighted / brand text",
+        "link":      "Hyperlinks",
+        "link-hover":"Link hover",
+        "on-accent": "Text sitting on accent bg"
+      },
+      "border": {
+        "default": "Default card / input border",
+        "strong":  "Strong border, separator",
+        "focus":   "Focus ring",
+        "accent":  "Accent / brand border"
+      },
+      "interactive": {
+        "primary-bg":       "Primary button bg",
+        "primary-bg-hover": "Primary button hover",
+        "primary-bg-active":"Primary button active/pressed",
+        "primary-text":     "Primary button label",
+        "secondary-bg":     "Secondary button bg",
+        "secondary-text":   "Secondary button label",
+        "ghost-text":       "Ghost button label",
+        "ghost-border":     "Ghost button border"
+      },
+      "feedback": {
+        "success-bg":   "Success background",
+        "success-text": "Success text/icon",
+        "warning-bg":   "Warning background",
+        "warning-text": "Warning text/icon",
+        "error-bg":     "Error background",
+        "error-text":   "Error text/icon",
+        "info-bg":      "Info background",
+        "info-text":    "Info text/icon"
+      },
+      "nav": {
+        "bg":        "Nav background — always dark",
+        "text":      "Nav link text",
+        "text-muted":"Inactive nav links",
+        "border":    "Nav bottom border",
+        "cta-bg":    "Nav CTA button",
+        "cta-text":  "Nav CTA label"
+      },
+      "card": {
+        "bg-light": "Default card background",
+        "bg-dark":  "Dark card variant",
+        "border":   "Card border",
+        "shadow":   "Card shadow color"
+      }
+    }
+  },
+  "typography": {
+    "fontSize": {
+      "2xs":  "Micro label, timestamp",
+      "xs":   "Caption, footnote",
+      "sm":   "Small label, badge",
+      "base": "Base body text — callout tags",
+      "md":   "Body MD — descriptions",
+      "lg":   "Body LG — intro paragraphs",
+      "xl":   "Body XL — lead copy",
+      "2xl":  "H4 / sub-heading",
+      "3xl":  "H3",
+      "4xl":  "H2",
+      "5xl":  "H1",
+      "6xl":  "Display SM",
+      "7xl":  "Display MD",
+      "8xl":  "Display LG — section title",
+      "9xl":  "Display XL — hero headline",
+      "10xl": "Display 2XL — mega hero"
+    },
+    "fontSizeModes": {
+      "note": "Font size supports three density modes: Default, Compact (−1–2px), and Loose (+1–4px)",
+      "compact": {
+        "2xs": "9px", "xs": "10px", "sm": "11px", "base": "13px", "md": "14px",
+        "lg": "16px", "xl": "18px", "2xl": "22px", "3xl": "26px", "4xl": "30px",
+        "5xl": "36px", "6xl": "44px", "7xl": "50px", "8xl": "64px", "9xl": "80px", "10xl": "96px"
+      },
+      "loose": {
+        "2xs": "11px", "xs": "12px", "sm": "13px", "base": "15px", "md": "18px",
+        "lg": "20px", "xl": "22px", "2xl": "28px", "3xl": "32px", "4xl": "36px",
+        "5xl": "44px", "6xl": "54px", "7xl": "64px", "8xl": "80px", "9xl": "108px", "10xl": "120px"
+      }
+    },
+    "lineHeight": {
+      "none":    "1:1 — display, all-caps labels",
+      "tight":   "Tight — large display headings",
+      "snug":    "Snug — subheadings",
+      "normal":  "Normal — body copy default",
+      "relaxed": "Relaxed — long-form paragraphs",
+      "loose":   "Loose — editorial / airy layouts"
+    },
+    "letterSpacing": {
+      "tighter":  "Very tight — large display only",
+      "tight":    "Tight — hero headlines",
+      "snug":     "Slightly tight — subheadings",
+      "normal":   "Normal — body copy",
+      "wide":     "Wide — Oswald body/UI",
+      "wider":    "Wider — labels, small caps",
+      "widest":   "Widest — Bebas Neue chips, overlines",
+      "ultra":    "Ultra wide — Bebas Neue display",
+      "tracking": "Tracking — eyebrow / section eyebrow"
+    },
+    "fontWeight": {
+      "thin":       "Thin (100)",
+      "extralight": "Extra Light (200)",
+      "light":      "Light (300)",
+      "regular":    "Regular (400) — Oswald body",
+      "medium":     "Medium (500)",
+      "semibold":   "SemiBold (600)",
+      "bold":       "Bold (700)",
+      "extrabold":  "Extra Bold (800)",
+      "black":      "Black / Heavy (900)"
+    },
+    "roles": {
+      "display/hero":  "Hero headline — largest scale",
+      "display/xl":    "Display XL",
+      "display/lg":    "Display LG",
+      "display/md":    "Display MD — section title",
+      "display/sm":    "Display SM",
+      "heading/h1":    "H1",
+      "heading/h2":    "H2",
+      "heading/h3":    "H3",
+      "heading/h4":    "H4",
+      "heading/h5":    "H5",
+      "metric/xl":     "KPI metric XL",
+      "metric/lg":     "KPI metric LG",
+      "metric/md":     "KPI metric MD",
+      "metric/sm":     "KPI metric SM",
+      "body/xl":       "Body XL — lead copy",
+      "body/lg":       "Body LG — standard",
+      "body/md":       "Body MD",
+      "body/sm":       "Body SM — descriptions",
+      "body/xs":       "Body XS — captions",
+      "label/lg":      "Label LG",
+      "label/md":      "Label MD — chips, buttons",
+      "label/sm":      "Label SM — badges",
+      "label/xs":      "Label XS — micro UI",
+      "overline/lg":   "Overline LG — section eyebrow",
+      "overline/md":   "Overline MD",
+      "overline/sm":   "Overline SM",
+      "sublabel/md":   "Sublabel — metric label, caption",
+      "sublabel/sm":   "Sublabel SM"
+    }
+  },
+  "spacing": {
+    "note": "4px base unit. Step names map to multipliers (space/4 = 16px = 4×4px)."
+  },
+  "sizing": {
+    "height": {
+      "xs": "Chip, badge, compact (28px)",
+      "sm": "Compact input, tag (36px)",
+      "md": "Default input, button (44px)",
+      "lg": "Large CTA button (52px)",
+      "xl": "XL component (64px)"
+    },
+    "icon": {
+      "xs": "Icon XS (12px)",
+      "sm": "Icon SM (16px)",
+      "md": "Icon MD — default (20px)",
+      "lg": "Icon LG (24px)",
+      "xl": "Icon XL (32px)"
+    },
+    "container": {
+      "sm":  "Small container (640px)",
+      "md":  "Medium container (768px)",
+      "lg":  "Large container (1024px)",
+      "xl":  "XL — portfolio default (1280px)",
+      "2xl": "Full bleed (1440px)"
+    },
+    "grid": {
+      "columns": "12-column grid",
+      "gutter":  "Column gutter (24px)",
+      "margin":  "Outer margin (80px)"
+    }
+  },
+  "zIndex": {
+    "hide":     "Hidden (−1)",
+    "base":     "Default flow (0)",
+    "raised":   "Cards, hover (10)",
+    "dropdown": "Dropdowns (100)",
+    "sticky":   "Sticky nav (200)",
+    "overlay":  "Overlays (300)",
+    "modal":    "Modals (400)",
+    "toast":    "Toasts (500)",
+    "tooltip":  "Tooltips (600)"
+  },
+  "duration": {
+    "instant":  "0ms",
+    "fast":     "75ms",
+    "snappy":   "100ms",
+    "base":     "150ms",
+    "moderate": "200ms",
+    "slow":     "300ms",
+    "slower":   "400ms",
+    "sluggish": "500ms"
+  },
+  "elevation": {
+    "note": "Shadow blur radius scale. Pair with card/shadow color token for full shadow shorthand."
+  },
+  "breakpoints": {
+    "xs":  "320px — small mobile",
+    "sm":  "480px — mobile",
+    "md":  "768px — tablet",
+    "lg":  "1024px — small desktop",
+    "xl":  "1280px — desktop",
+    "2xl": "1440px — large desktop",
+    "3xl": "1920px — ultra wide"
+  }
+}

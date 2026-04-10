@@ -1,0 +1,102 @@
+{
+  "fs": {
+    "2xs":  { "$value": "10px",  "$type": "fontSize", "$description": "Micro label, timestamp" },
+    "xs":   { "$value": "11px",  "$type": "fontSize", "$description": "Caption, footnote" },
+    "sm":   { "$value": "12px",  "$type": "fontSize", "$description": "Small label, badge" },
+    "base": { "$value": "14px",  "$type": "fontSize", "$description": "Base body text — callout tags" },
+    "md":   { "$value": "16px",  "$type": "fontSize", "$description": "Body MD — descriptions" },
+    "lg":   { "$value": "18px",  "$type": "fontSize", "$description": "Body LG — intro paragraphs" },
+    "xl":   { "$value": "20px",  "$type": "fontSize", "$description": "Body XL — lead copy" },
+    "2xl":  { "$value": "24px",  "$type": "fontSize", "$description": "H4 / sub-heading" },
+    "3xl":  { "$value": "28px",  "$type": "fontSize", "$description": "H3" },
+    "4xl":  { "$value": "32px",  "$type": "fontSize", "$description": "H2" },
+    "5xl":  { "$value": "40px",  "$type": "fontSize", "$description": "H1" },
+    "6xl":  { "$value": "48px",  "$type": "fontSize", "$description": "Display SM" },
+    "7xl":  { "$value": "56px",  "$type": "fontSize", "$description": "Display MD" },
+    "8xl":  { "$value": "72px",  "$type": "fontSize", "$description": "Display LG — section title" },
+    "9xl":  { "$value": "96px",  "$type": "fontSize", "$description": "Display XL — hero headline" },
+    "10xl": { "$value": "112px", "$type": "fontSize", "$description": "Display 2XL — mega hero" }
+  },
+  "lh": {
+    "none":    { "$value": "1",    "$type": "lineHeight", "$description": "1:1 — display, all-caps labels" },
+    "tight":   { "$value": "1.1",  "$type": "lineHeight", "$description": "Tight — large display headings" },
+    "snug":    { "$value": "1.25", "$type": "lineHeight", "$description": "Snug — subheadings" },
+    "normal":  { "$value": "1.5",  "$type": "lineHeight", "$description": "Normal — body copy default" },
+    "relaxed": { "$value": "1.625","$type": "lineHeight", "$description": "Relaxed — long-form paragraphs" },
+    "loose":   { "$value": "2",    "$type": "lineHeight", "$description": "Loose — editorial / airy layouts" }
+  },
+  "ls": {
+    "tighter": { "$value": "-1.5px", "$type": "letterSpacing", "$description": "Very tight — large display only" },
+    "tight":   { "$value": "-0.5px", "$type": "letterSpacing", "$description": "Tight — hero headlines" },
+    "snug":    { "$value": "-0.25px","$type": "letterSpacing", "$description": "Slightly tight — subheadings" },
+    "normal":  { "$value": "0px",    "$type": "letterSpacing", "$description": "Normal — body copy" },
+    "wide":    { "$value": "0.3px",  "$type": "letterSpacing", "$description": "Wide — Oswald body/UI" },
+    "wider":   { "$value": "1px",    "$type": "letterSpacing", "$description": "Wider — labels, small caps" },
+    "widest":  { "$value": "1.5px",  "$type": "letterSpacing", "$description": "Widest — Bebas Neue chips, overlines" },
+    "ultra":   { "$value": "2px",    "$type": "letterSpacing", "$description": "Ultra wide — Bebas Neue display" },
+    "tracking":{ "$value": "3px",    "$type": "letterSpacing", "$description": "Tracking — eyebrow / section eyebrow" }
+  },
+  "fw": {
+    "thin":       { "$value": "100", "$type": "fontWeight", "$description": "Thin" },
+    "extralight": { "$value": "200", "$type": "fontWeight", "$description": "Extra Light" },
+    "light":      { "$value": "300", "$type": "fontWeight", "$description": "Light" },
+    "regular":    { "$value": "400", "$type": "fontWeight", "$description": "Regular — Oswald body" },
+    "medium":     { "$value": "500", "$type": "fontWeight", "$description": "Medium" },
+    "semibold":   { "$value": "600", "$type": "fontWeight", "$description": "SemiBold" },
+    "bold":       { "$value": "700", "$type": "fontWeight", "$description": "Bold" },
+    "extrabold":  { "$value": "800", "$type": "fontWeight", "$description": "Extra Bold" },
+    "black":      { "$value": "900", "$type": "fontWeight", "$description": "Black / Heavy" }
+  },
+  "para": {
+    "none": { "$value": "0px",  "$type": "spacing", "$description": "No paragraph spacing" },
+    "xs":   { "$value": "4px",  "$type": "spacing", "$description": "Tight — dense UI lists" },
+    "sm":   { "$value": "8px",  "$type": "spacing", "$description": "Small — compact body" },
+    "md":   { "$value": "12px", "$type": "spacing", "$description": "Medium — default body" },
+    "lg":   { "$value": "16px", "$type": "spacing", "$description": "Large — editorial spacing" },
+    "xl":   { "$value": "24px", "$type": "spacing", "$description": "XL — feature copy" }
+  },
+  "role": {
+    "display": {
+      "hero": { "$value": "112px", "$type": "fontSize", "$description": "Hero headline — 9xl equiv" },
+      "xl":   { "$value": "96px",  "$type": "fontSize", "$description": "Display XL" },
+      "lg":   { "$value": "72px",  "$type": "fontSize", "$description": "Display LG" },
+      "md":   { "$value": "56px",  "$type": "fontSize", "$description": "Display MD — section title" },
+      "sm":   { "$value": "40px",  "$type": "fontSize", "$description": "Display SM" }
+    },
+    "heading": {
+      "h1": { "$value": "32px", "$type": "fontSize", "$description": "H1" },
+      "h2": { "$value": "28px", "$type": "fontSize", "$description": "H2" },
+      "h3": { "$value": "24px", "$type": "fontSize", "$description": "H3" },
+      "h4": { "$value": "20px", "$type": "fontSize", "$description": "H4" },
+      "h5": { "$value": "18px", "$type": "fontSize", "$description": "H5" }
+    },
+    "metric": {
+      "xl": { "$value": "72px", "$type": "fontSize", "$description": "KPI metric XL" },
+      "lg": { "$value": "56px", "$type": "fontSize", "$description": "KPI metric LG" },
+      "md": { "$value": "40px", "$type": "fontSize", "$description": "KPI metric MD" },
+      "sm": { "$value": "32px", "$type": "fontSize", "$description": "KPI metric SM" }
+    },
+    "body": {
+      "xl": { "$value": "20px", "$type": "fontSize", "$description": "Body XL — lead copy" },
+      "lg": { "$value": "18px", "$type": "fontSize", "$description": "Body LG — standard" },
+      "md": { "$value": "16px", "$type": "fontSize", "$description": "Body MD" },
+      "sm": { "$value": "14px", "$type": "fontSize", "$description": "Body SM — descriptions" },
+      "xs": { "$value": "12px", "$type": "fontSize", "$description": "Body XS — captions" }
+    },
+    "label": {
+      "lg": { "$value": "16px", "$type": "fontSize", "$description": "Label LG" },
+      "md": { "$value": "14px", "$type": "fontSize", "$description": "Label MD — chips, buttons" },
+      "sm": { "$value": "12px", "$type": "fontSize", "$description": "Label SM — badges" },
+      "xs": { "$value": "10px", "$type": "fontSize", "$description": "Label XS — micro UI" }
+    },
+    "overline": {
+      "lg": { "$value": "13px", "$type": "fontSize", "$description": "Overline LG — section eyebrow" },
+      "md": { "$value": "11px", "$type": "fontSize", "$description": "Overline MD" },
+      "sm": { "$value": "9px",  "$type": "fontSize", "$description": "Overline SM" }
+    },
+    "sublabel": {
+      "md": { "$value": "12px", "$type": "fontSize", "$description": "Sublabel — metric label, caption" },
+      "sm": { "$value": "11px", "$type": "fontSize", "$description": "Sublabel SM" }
+    }
+  }
+}
