@@ -11,7 +11,7 @@
     "sync:tokens": "node scripts/sync-tokens.js",
     "clean": "rm -rf dist",
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
+    "build-storybook": "storybook build --output-dir storybook-static"
   },
   "keywords": [
     "design-tokens",
