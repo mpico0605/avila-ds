@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import React from 'react';
-import { Card, CardVariant } from './Card';
+import { Card, CardAccent, CardVariant } from './Card';
 
 const meta: Meta<typeof Card> = {
   title: 'Components/Card',
@@ -26,6 +26,12 @@ const meta: Meta<typeof Card> = {
       control: 'boolean',
       description: 'Show a hairline divider above the footer',
       table: { defaultValue: { summary: 'false' } },
+    },
+    accent: {
+      control: 'select',
+      options: [undefined, 'primary', 'secondary', 'success', 'warning', 'destructive', 'rainbow'] satisfies (CardAccent | undefined)[],
+      description: 'Top border stripe — solid token color or rainbow gradient',
+      table: { defaultValue: { summary: 'none' } },
     },
   },
 };
@@ -153,6 +159,27 @@ export const WithFooter: Story = {
       >
         <SampleBody />
       </Card>
+    </div>
+  ),
+};
+
+/* ── Accent variants ───────────────────────────────────────────────────────── */
+export const AllAccents: Story = {
+  name: 'All Accents',
+  render: () => (
+    <div style={{ display: 'flex', gap: 20, alignItems: 'flex-start', flexWrap: 'wrap' }}>
+      {(['primary', 'secondary', 'success', 'warning', 'destructive', 'rainbow'] as CardAccent[]).map((a) => (
+        <Card
+          key={a}
+          variant="elevated"
+          accent={a}
+          title={a.charAt(0).toUpperCase() + a.slice(1)}
+          subtitle="Top stripe accent"
+          style={{ width: 220 }}
+        >
+          <SampleBody />
+        </Card>
+      ))}
     </div>
   ),
 };

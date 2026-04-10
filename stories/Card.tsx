@@ -3,12 +3,15 @@ import styles from './Card.module.css';
 
 export type CardVariant = 'default' | 'elevated' | 'outlined';
 export type CardPadding = 'sm' | 'md' | 'lg';
+export type CardAccent = 'primary' | 'secondary' | 'success' | 'warning' | 'destructive' | 'rainbow';
 
 export interface CardProps {
   /** Visual elevation variant */
   variant?: CardVariant;
   /** Inner padding size */
   padding?: CardPadding;
+  /** Top border stripe color — maps to brand/feedback tokens; 'rainbow' renders a gradient */
+  accent?: CardAccent;
   /** Card title text */
   title?: string;
   /** Secondary label beneath the title */
@@ -29,6 +32,7 @@ export interface CardProps {
 export const Card: React.FC<CardProps> = ({
   variant = 'default',
   padding = 'md',
+  accent,
   title,
   subtitle,
   footer,
@@ -41,6 +45,7 @@ export const Card: React.FC<CardProps> = ({
     styles.card,
     styles[`variant-${variant}`],
     styles[`padding-${padding}`],
+    accent ? styles[`accent-${accent}`] : '',
     className ?? '',
   ]
     .filter(Boolean)

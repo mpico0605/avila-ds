@@ -1,5 +1,6 @@
 import '../dist/css/tokens.light.css';
 import '../dist/css/tokens.dark.css';
+import '../stories/global.css';
 import '../stories/button.css';
 import { withThemeByDataAttribute } from '@storybook/addon-themes';
 

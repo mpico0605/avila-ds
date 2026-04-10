@@ -11,6 +11,7 @@
 
 /* ── Label ──────────────────────────────────────────────────────────────── */
 .label {
+  font-family: var(--avila-font-body);
   font-size: var(--avila-role-label-md);
   font-weight: var(--avila-fw-semibold);
   color: var(--avila-color-text-primary);
@@ -134,18 +135,21 @@
 
 /* ── Helper / error text ─────────────────────────────────────────────────── */
 .helperText {
+  font-family: var(--avila-font-body);
   font-size: var(--avila-role-body-xs);
   color: var(--avila-color-text-muted);
   line-height: var(--avila-lh-normal);
 }
 
 .errorText {
+  font-family: var(--avila-font-body);
   font-size: var(--avila-role-body-xs);
   color: var(--avila-color-feedback-error-text);
   line-height: var(--avila-lh-normal);
 }
 
 .successText {
+  font-family: var(--avila-font-body);
   font-size: var(--avila-role-body-xs);
   color: var(--avila-color-feedback-success-text);
   line-height: var(--avila-lh-normal);

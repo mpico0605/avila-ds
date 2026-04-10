@@ -12,7 +12,7 @@
   gap: var(--avila-space-2);
   border: 2px solid transparent;
   border-radius: 0; /* sharp corners — matches Figma */
-  font-family: 'Bebas Neue', sans-serif;
+  font-family: var(--avila-font-display);
   font-size: 16px;
   font-weight: 400;
   letter-spacing: 0.04em;

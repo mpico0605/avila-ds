@@ -7,7 +7,7 @@
   align-items: center;
   gap: var(--avila-space-1);
   border-radius: 0; /* sharp — Figma default */
-  font-family: 'Bebas Neue', sans-serif;
+  font-family: var(--avila-font-display);
   font-weight: var(--avila-fw-regular);
   letter-spacing: var(--avila-ls-widest);
   text-transform: uppercase;

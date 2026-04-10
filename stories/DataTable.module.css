@@ -19,7 +19,7 @@
 
 /* ── Caption / table title ──────────────────────────────────────────────── */
 .caption {
-  font-family: 'Bebas Neue', sans-serif;
+  font-family: var(--avila-font-display);
   font-size: var(--avila-fs-xl);
   letter-spacing: var(--avila-ls-wide);
   color: var(--avila-color-text-primary);
@@ -37,7 +37,7 @@
 .th {
   padding: var(--avila-space-3) var(--avila-space-4);
   text-align: left;
-  font-family: 'Bebas Neue', sans-serif;
+  font-family: var(--avila-font-display);
   font-size: var(--avila-role-label-sm);
   font-weight: var(--avila-fw-regular);
   letter-spacing: var(--avila-ls-widest);
@@ -82,6 +82,7 @@
 .td {
   padding: var(--avila-space-3) var(--avila-space-4);
   vertical-align: middle;
+  font-family: var(--avila-font-body);
   line-height: var(--avila-lh-normal);
   color: var(--avila-color-text-primary);
 }
@@ -118,6 +119,7 @@
 .emptyCell {
   text-align: center;
   padding: var(--avila-space-10) var(--avila-space-4);
+  font-family: var(--avila-font-body);
   color: var(--avila-color-text-muted);
   font-size: var(--avila-role-body-sm);
 }
@@ -130,6 +132,7 @@
   padding: var(--avila-space-3) var(--avila-space-4);
   border-top: 1px solid var(--avila-color-border-default);
   background-color: var(--avila-color-background-surface);
+  font-family: var(--avila-font-body);
   font-size: var(--avila-role-body-xs);
   color: var(--avila-color-text-muted);
 }

@@ -1,0 +1,14 @@
+/* ─── AvilaDS Global Styles ──────────────────────────────────────────────────
+   Defines font-family tokens not present in the auto-generated token files,
+   and sets the body default so all components inherit Oswald without needing
+   an explicit font-family on every selector.
+─────────────────────────────────────────────────────────────────────────── */
+
+:root {
+  --avila-font-display: 'Bebas Neue', sans-serif;
+  --avila-font-body: 'Oswald', sans-serif;
+}
+
+body {
+  font-family: var(--avila-font-body);
+}
