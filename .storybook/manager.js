@@ -3,7 +3,7 @@ import { create } from '@storybook/theming/create';
 
 const COMMON = {
   brandTitle: 'AvilaDS',
-  brandUrl: 'https://avilaDS-storybook-tokens.vercel.app',
+  brandUrl: 'https://avila-ds.vercel.app',
   brandTarget: '_blank',
   colorPrimary:   '#e8195a',   // --avila-color-interactive-primary-bg (hot pink)
   colorSecondary: '#e8195a',

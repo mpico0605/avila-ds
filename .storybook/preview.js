@@ -47,6 +47,11 @@ const preview = {
     // doesn't sync with the theme global, so disabling it prevents it from
     // overriding the decorator's inline style on every render.
     backgrounds: { disable: true },
+    options: {
+      storySort: {
+        order: ['Introduction', 'Foundations', 'Components', 'Tokens', '*'],
+      },
+    },
     controls: {
       matchers: {
         color: /(background|color)$/i,
