@@ -29,6 +29,14 @@
   font-size: var(--avila-role-label-sm);
 }
 
+/* ── Icon ───────────────────────────────────────────────────────────────── */
+.icon {
+  display: inline-flex;
+  align-items: center;
+  flex-shrink: 0;
+  line-height: 0;
+}
+
 /* ── Dot ────────────────────────────────────────────────────────────────── */
 .dot {
   width: 6px;

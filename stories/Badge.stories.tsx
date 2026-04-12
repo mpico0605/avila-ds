@@ -1,5 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import React from 'react';
+import { Check, AlertCircle, Download, Search } from 'lucide-react';
 import { Badge, BadgeVariant } from './Badge';
 
 const meta: Meta<typeof Badge> = {
@@ -126,6 +127,35 @@ export const AllVariants: Story = {
             <Badge key={v} variant={v} label={v} dot />
           ))}
         </div>
+      </div>
+    </div>
+  ),
+};
+
+export const WithIcon: Story = {
+  name: 'With Icon',
+  render: () => (
+    <div style={{ display: 'flex', gap: 8, flexWrap: 'wrap', alignItems: 'center' }}>
+      <Badge variant="success" label="Verified" icon={<Check size={12} />} />
+      <Badge variant="error" label="Failed" icon={<AlertCircle size={12} />} />
+      <Badge variant="teal" label="Download" icon={<Download size={12} />} />
+      <Badge variant="cobalt" label="Search" icon={<Search size={12} />} />
+      <Badge variant="neutral" label="Info" icon={<AlertCircle size={12} />} />
+    </div>
+  ),
+};
+
+export const IconAndDot: Story = {
+  name: 'Icon vs Dot Comparison',
+  render: () => (
+    <div style={{ display: 'flex', flexDirection: 'column', gap: 8 }}>
+      <div style={{ display: 'flex', gap: 8, alignItems: 'center' }}>
+        <Badge variant="success" label="Online" dot />
+        <Badge variant="success" label="Online" icon={<Check size={12} />} />
+      </div>
+      <div style={{ display: 'flex', gap: 8, alignItems: 'center' }}>
+        <Badge variant="error" label="Error" dot />
+        <Badge variant="error" label="Error" icon={<AlertCircle size={12} />} />
       </div>
     </div>
   ),

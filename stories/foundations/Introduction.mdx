@@ -1,0 +1,381 @@
+import { Meta } from "@storybook/blocks";
+
+<Meta title="Foundations/Introduction" />
+
+<style>
+  {`
+    .fnd-intro {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 48px 24px 80px;
+      font-family: 'Oswald', sans-serif;
+      color: #1a1208;
+    }
+
+    .fnd-section-label {
+      display: block;
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: #e8195a;
+      margin: 0 0 12px;
+    }
+
+    .fnd-hero-title {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 64px;
+      letter-spacing: 0.04em;
+      line-height: 1;
+      margin: 0 0 16px;
+      color: #1a1208;
+    }
+
+    .fnd-lead {
+      display: block;
+      font-size: 18px;
+      font-weight: 300;
+      line-height: 1.7;
+      color: #4f3e2c;
+      margin: 0;
+      max-width: 620px;
+    }
+
+    .fnd-divider {
+      border: none;
+      border-top: 1px solid #ece8e2;
+      margin: 40px 0;
+    }
+
+    .fnd-section-title {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 36px;
+      letter-spacing: 0.04em;
+      margin: 0 0 16px;
+      color: #1a1208;
+    }
+
+    .fnd-body {
+      display: block;
+      font-size: 15px;
+      font-weight: 300;
+      line-height: 1.8;
+      color: #3d3020;
+      margin: 0 0 14px;
+    }
+
+    .fnd-body strong {
+      font-weight: 600;
+      color: #1a1208;
+    }
+
+    .fnd-callout {
+      border-left: 3px solid #e8195a;
+      padding: 16px 20px;
+      background: #fce8ee;
+      border-radius: 0 6px 6px 0;
+      margin: 24px 0;
+    }
+
+    .fnd-callout-text {
+      display: block;
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 1.7;
+      color: #2e2416;
+      margin: 0;
+    }
+
+    .fnd-callout-text em {
+      font-style: normal;
+      font-weight: 600;
+    }
+
+    /* Pipeline diagram */
+    .fnd-pipeline {
+      display: flex;
+      align-items: center;
+      gap: 0;
+      margin: 32px 0;
+      flex-wrap: wrap;
+    }
+
+    .fnd-pipeline-step {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 8px;
+      flex: 1 1 120px;
+      min-width: 100px;
+    }
+
+    .fnd-pipeline-icon {
+      width: 56px;
+      height: 56px;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 24px;
+      background: #f5f0e8;
+      border: 1px solid #d8d2ca;
+    }
+
+    .fnd-pipeline-name {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 15px;
+      letter-spacing: 0.06em;
+      color: #1a1208;
+      text-align: center;
+    }
+
+    .fnd-pipeline-desc {
+      font-size: 11px;
+      font-weight: 400;
+      color: #7a6e65;
+      text-align: center;
+      line-height: 1.4;
+    }
+
+    .fnd-pipeline-arrow {
+      font-size: 20px;
+      color: #c0b8ae;
+      flex-shrink: 0;
+      padding: 0 4px;
+      margin-bottom: 24px;
+    }
+
+    /* Token tier cards */
+    .fnd-tier-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 16px;
+      margin: 24px 0;
+    }
+
+    .fnd-tier-card {
+      border: 1px solid #d8d2ca;
+      border-radius: 8px;
+      padding: 20px;
+      background: #fdfaf6;
+    }
+
+    .fnd-tier-card-label {
+      display: block;
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: #e8195a;
+      margin: 0 0 6px;
+    }
+
+    .fnd-tier-card-title {
+      display: block;
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 20px;
+      letter-spacing: 0.04em;
+      color: #1a1208;
+      margin: 0 0 8px;
+    }
+
+    .fnd-tier-card-body {
+      display: block;
+      font-size: 13px;
+      font-weight: 300;
+      line-height: 1.6;
+      color: #4f3e2c;
+      margin: 0 0 12px;
+    }
+
+    .fnd-tier-card-example {
+      font-family: 'JetBrains Mono', 'Fira Code', monospace;
+      font-size: 11px;
+      background: #ece8e2;
+      color: #2e2416;
+      border-radius: 4px;
+      padding: 6px 10px;
+      word-break: break-all;
+    }
+
+    /* Output chips */
+    .fnd-output-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin: 20px 0;
+    }
+
+    .fnd-output-chip {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      border: 1px solid #d8d2ca;
+      border-radius: 8px;
+      padding: 12px 16px;
+      background: #fdfaf6;
+      flex: 1 1 180px;
+    }
+
+    .fnd-output-chip-icon {
+      font-size: 20px;
+    }
+
+    .fnd-output-chip-text {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
+
+    .fnd-output-chip-name {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 15px;
+      letter-spacing: 0.04em;
+      color: #1a1208;
+    }
+
+    .fnd-output-chip-desc {
+      font-size: 11px;
+      font-weight: 300;
+      color: #7a6e65;
+    }
+  `}
+</style>
+
+<div className="fnd-intro">
+
+  <span className="fnd-section-label">Foundations</span>
+  <h1 className="fnd-hero-title">Design Tokens</h1>
+  <span className="fnd-lead">The single source of truth for every visual decision in AvilaDS — from the warmth of a background to the weight of a type scale.</span>
+
+  <hr className="fnd-divider" />
+
+  {/* ── What are design tokens ── */}
+  <div>
+    <span className="fnd-section-label">The Basics</span>
+    <h2 className="fnd-section-title">What is a design token?</h2>
+    <div className="fnd-body">A design token is a named decision. Not <code>#e8195a</code> — but <strong>interactive-primary-bg</strong>. Not <code>16px</code> — but <strong>space-4</strong>. Tokens lift raw values out of stylesheets and give them meaning, context, and a home they can be referenced from anywhere — in Figma, in code, in documentation.</div>
+    <div className="fnd-body">The moment a product designer changes a brand color in Figma, that change shouldn't require hunting through a dozen component files. With tokens, it propagates everywhere automatically — every button, badge, and border that references the token updates in one pass.</div>
+
+    <div className="fnd-callout">
+      <span className="fnd-callout-text"><em>Tokens are not styles.</em> They are the contract between design and engineering — a shared language that makes handoff a non-event and makes systematic change feel inevitable rather than painful.</span>
+    </div>
+  </div>
+
+  <hr className="fnd-divider" />
+
+  {/* ── Why tokens exist ── */}
+  <div>
+    <span className="fnd-section-label">The Why</span>
+    <h2 className="fnd-section-title">Built for scale. Built to last.</h2>
+    <div className="fnd-body">AvilaDS was built in the context of fintech and iGaming products — environments where brand trust is everything, theming requirements are complex, and visual consistency directly affects user confidence. Tokens aren't an academic exercise here. They are how we ship <strong>dark mode without duplication</strong>, support <strong>white-label theming</strong> without branching components, and maintain <strong>accessibility standards</strong> across every surface.</div>
+    <div className="fnd-body">AvilaDS uses a three-tier token architecture: primitives hold raw values, semantic tokens assign meaning to those values, and component tokens bind semantics to specific UI contexts. Each tier exists so that decisions at the right level of abstraction stay there — and don't leak downward.</div>
+
+    <div className="fnd-tier-grid">
+      <div className="fnd-tier-card">
+        <span className="fnd-tier-card-label">Tier 1</span>
+        <span className="fnd-tier-card-title">Primitives</span>
+        <span className="fnd-tier-card-body">Raw values with no opinion. Every color, radius, and spacing step the system allows — nothing more.</span>
+        <code className="fnd-tier-card-example">--avila-primitive-color-hot-pink</code>
+      </div>
+      <div className="fnd-tier-card">
+        <span className="fnd-tier-card-label">Tier 2</span>
+        <span className="fnd-tier-card-title">Semantic</span>
+        <span className="fnd-tier-card-body">Intent over value. References a primitive but describes <em>what it's for</em>, not what it looks like.</span>
+        <code className="fnd-tier-card-example">--avila-color-interactive-primary-bg</code>
+      </div>
+      <div className="fnd-tier-card">
+        <span className="fnd-tier-card-label">Tier 3</span>
+        <span className="fnd-tier-card-title">Component</span>
+        <span className="fnd-tier-card-body">Scoped to a specific component. Points to a semantic token, unlocking per-component overrides without breaking the system.</span>
+        <code className="fnd-tier-card-example">--avila-button-bg</code>
+      </div>
+    </div>
+  </div>
+
+  <hr className="fnd-divider" />
+
+  {/* ── Pipeline ── */}
+  <div>
+    <span className="fnd-section-label">The Pipeline</span>
+    <h2 className="fnd-section-title">Figma → Style Dictionary → Storybook</h2>
+    <div className="fnd-body">Tokens originate in Figma as Variables — the design tool's native token layer. From there, a sync script exports them as structured JSON. That JSON feeds <strong>Style Dictionary</strong>, which transforms and formats the tokens into every platform target the codebase needs. Storybook is the last stop: it consumes the CSS output and renders both the living documentation you're reading right now and every component story on top of real, production-bound tokens.</div>
+
+    <div className="fnd-pipeline">
+      <div className="fnd-pipeline-step">
+        <div className="fnd-pipeline-icon">🎨</div>
+        <span className="fnd-pipeline-name">Figma</span>
+        <span className="fnd-pipeline-desc">Variables defined by the designer</span>
+      </div>
+      <span className="fnd-pipeline-arrow">→</span>
+      <div className="fnd-pipeline-step">
+        <div className="fnd-pipeline-icon">📄</div>
+        <span className="fnd-pipeline-name">JSON</span>
+        <span className="fnd-pipeline-desc">Exported &amp; version-controlled</span>
+      </div>
+      <span className="fnd-pipeline-arrow">→</span>
+      <div className="fnd-pipeline-step">
+        <div className="fnd-pipeline-icon">⚙️</div>
+        <span className="fnd-pipeline-name">Style Dictionary</span>
+        <span className="fnd-pipeline-desc">Transforms &amp; formats tokens</span>
+      </div>
+      <span className="fnd-pipeline-arrow">→</span>
+      <div className="fnd-pipeline-step">
+        <div className="fnd-pipeline-icon">📦</div>
+        <span className="fnd-pipeline-name">Dist</span>
+        <span className="fnd-pipeline-desc">CSS, JS, SCSS outputs</span>
+      </div>
+      <span className="fnd-pipeline-arrow">→</span>
+      <div className="fnd-pipeline-step">
+        <div className="fnd-pipeline-icon">📖</div>
+        <span className="fnd-pipeline-name">Storybook</span>
+        <span className="fnd-pipeline-desc">Live docs &amp; component previews</span>
+      </div>
+    </div>
+
+    <div className="fnd-body">This pipeline means the gap between a designer updating a variable in Figma and an engineer shipping it in production can be as short as running one command — <code>npm run build:tokens</code>. No translation layer. No manual handoff. No drift.</div>
+  </div>
+
+  <hr className="fnd-divider" />
+
+  {/* ── Output formats ── */}
+  <div>
+    <span className="fnd-section-label">Outputs</span>
+    <h2 className="fnd-section-title">One source. Every platform.</h2>
+    <div className="fnd-body">Style Dictionary compiles the token JSON into four distribution formats. Each is purpose-built for a different consumption context — pick the one that fits your stack, and all will stay in sync.</div>
+
+    <div className="fnd-output-grid">
+      <div className="fnd-output-chip">
+        <span className="fnd-output-chip-icon">🎨</span>
+        <div className="fnd-output-chip-text">
+          <span className="fnd-output-chip-name">CSS Variables</span>
+          <span className="fnd-output-chip-desc">tokens.light.css / tokens.dark.css</span>
+        </div>
+      </div>
+      <div className="fnd-output-chip">
+        <span className="fnd-output-chip-icon">📜</span>
+        <div className="fnd-output-chip-text">
+          <span className="fnd-output-chip-name">JavaScript</span>
+          <span className="fnd-output-chip-desc">tokens.light.js / tokens.dark.js</span>
+        </div>
+      </div>
+      <div className="fnd-output-chip">
+        <span className="fnd-output-chip-icon">🔷</span>
+        <div className="fnd-output-chip-text">
+          <span className="fnd-output-chip-name">TypeScript</span>
+          <span className="fnd-output-chip-desc">Typed token map for autocomplete</span>
+        </div>
+      </div>
+      <div className="fnd-output-chip">
+        <span className="fnd-output-chip-icon">💅</span>
+        <div className="fnd-output-chip-text">
+          <span className="fnd-output-chip-name">SCSS</span>
+          <span className="fnd-output-chip-desc">_tokens.light.scss / _tokens.dark.scss</span>
+        </div>
+      </div>
+    </div>
+
+    <div className="fnd-body">Explore the token categories in the sidebar — <strong>Color</strong>, <strong>Spacing</strong>, and <strong>Radius</strong> each have dedicated pages that render every token live, showing both the resolved value and the raw variable name.</div>
+  </div>
+
+</div>

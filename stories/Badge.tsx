@@ -28,6 +28,8 @@ export interface BadgeProps {
   label: string;
   /** Show a leading status dot */
   dot?: boolean;
+  /** Lucide icon component rendered before the label */
+  icon?: React.ReactNode;
   /** Pill (fully rounded) instead of sharp corners */
   pill?: boolean;
   className?: string;
@@ -44,6 +46,7 @@ export const Badge: React.FC<BadgeProps> = ({
   size = 'md',
   label,
   dot = false,
+  icon,
   pill = false,
   className,
   style,
@@ -61,6 +64,7 @@ export const Badge: React.FC<BadgeProps> = ({
   return (
     <span className={classes} style={style}>
       {dot && <span className={styles.dot} aria-hidden="true" />}
+      {icon && <span className={styles.icon} aria-hidden="true">{icon}</span>}
       {label}
     </span>
   );

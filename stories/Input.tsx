@@ -22,6 +22,8 @@ export interface InputProps
   successText?: string;
   /** Icon rendered inside the leading (left) edge */
   leadingIcon?: React.ReactNode;
+  /** Alias for leadingIcon — icon rendered inside the left edge of the input */
+  startIcon?: React.ReactNode;
   /** Icon rendered inside the trailing (right) edge */
   trailingIcon?: React.ReactNode;
 }
@@ -41,6 +43,7 @@ export const Input = React.forwardRef<HTMLInputElement, InputProps>(
       errorText,
       successText,
       leadingIcon,
+      startIcon,
       trailingIcon,
       id: idProp,
       disabled,
@@ -52,11 +55,13 @@ export const Input = React.forwardRef<HTMLInputElement, InputProps>(
     const generatedId = useId();
     const id = idProp ?? generatedId;
 
+    const resolvedLeadingIcon = leadingIcon ?? startIcon;
+
     const inputClasses = [
       styles.input,
       styles[`size-${size}`],
       status !== 'default' ? styles[`status-${status}`] : '',
-      leadingIcon ? styles.hasLeadingIcon : '',
+      resolvedLeadingIcon ? styles.hasLeadingIcon : '',
       trailingIcon ? styles.hasTrailingIcon : '',
       className ?? '',
     ]
@@ -81,7 +86,7 @@ export const Input = React.forwardRef<HTMLInputElement, InputProps>(
           </label>
         )}
         <div className={styles.inputContainer}>
-          {leadingIcon && <span className={styles.leadingIcon}>{leadingIcon}</span>}
+          {resolvedLeadingIcon && <span className={styles.leadingIcon}>{resolvedLeadingIcon}</span>}
           <input
             ref={ref}
             id={id}

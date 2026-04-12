@@ -1,6 +1,7 @@
 import React from 'react';
 import type { Meta, StoryObj } from '@storybook/react';
 import { fn } from '@storybook/test';
+import { ArrowRight, Download, Check } from 'lucide-react';
 
 import { Button } from './Button.tsx';
 import type { ButtonVariant, ButtonSize } from './Button.tsx';
@@ -171,6 +172,42 @@ export const SizeComparison: Story = {
       <Button variant="primary" size="sm">Small — 36 px</Button>
       <Button variant="primary" size="md">Medium — 44 px</Button>
       <Button variant="primary" size="lg">Large — 52 px</Button>
+    </div>
+  ),
+};
+
+// ─── Icon Variants ────────────────────────────────────────────────────────────
+
+export const WithRightIcon: Story = {
+  name: 'Icons / Right Icon',
+  args: { variant: 'primary', children: 'Next Step', rightIcon: <ArrowRight size={16} /> },
+};
+
+export const WithLeftIcon: Story = {
+  name: 'Icons / Left Icon',
+  args: { variant: 'teal', children: 'Download', leftIcon: <Download size={16} /> },
+};
+
+export const WithBothIcons: Story = {
+  name: 'Icons / Both',
+  args: { variant: 'cobalt', children: 'Confirm', leftIcon: <Check size={16} />, rightIcon: <ArrowRight size={16} /> },
+};
+
+export const IconsAllVariants: Story = {
+  name: 'Icons / All Variants',
+  parameters: { controls: { disable: true } },
+  render: () => (
+    <div style={{ display: 'flex', flexDirection: 'column', gap: 16 }}>
+      <div style={{ display: 'flex', alignItems: 'center', gap: 16, flexWrap: 'wrap' }}>
+        <Button variant="primary" rightIcon={<ArrowRight size={16} />}>View Work</Button>
+        <Button variant="outline" rightIcon={<ArrowRight size={16} />}>Case Study</Button>
+        <Button variant="dark" rightIcon={<ArrowRight size={16} />}>Learn More</Button>
+      </div>
+      <div style={{ display: 'flex', alignItems: 'center', gap: 16, flexWrap: 'wrap' }}>
+        <Button variant="teal" leftIcon={<Download size={16} />}>Download</Button>
+        <Button variant="cobalt" leftIcon={<Check size={16} />}>Confirm</Button>
+        <Button variant="marigold" leftIcon={<Check size={16} />} rightIcon={<ArrowRight size={16} />}>Get Started</Button>
+      </div>
     </div>
   ),
 };

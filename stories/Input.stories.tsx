@@ -1,21 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import React from 'react';
+import { Search, AlertCircle, Eye } from 'lucide-react';
 import { Input } from './Input';
-
-/* ── Minimal inline SVG icons for demo ──────────────────────────────────── */
-const SearchIcon = () => (
-  <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
-    <circle cx="6.5" cy="6.5" r="4" stroke="currentColor" strokeWidth="1.5" />
-    <path d="M10 10l3 3" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
-  </svg>
-);
-
-const EyeIcon = () => (
-  <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
-    <ellipse cx="8" cy="8" rx="6" ry="4" stroke="currentColor" strokeWidth="1.5" />
-    <circle cx="8" cy="8" r="1.5" fill="currentColor" />
-  </svg>
-);
 
 const meta: Meta<typeof Input> = {
   title: 'Components/Input',
@@ -172,13 +158,21 @@ export const WithIcons: Story = {
   name: 'With Icons',
   render: () => (
     <div style={{ display: 'flex', flexDirection: 'column', gap: 20, width: 320 }}>
-      <Input label="Search" placeholder="Search…" leadingIcon={<SearchIcon />} />
-      <Input label="Password" placeholder="Enter password" type="password" trailingIcon={<EyeIcon />} />
+      <Input label="Search" placeholder="Search…" startIcon={<Search size={16} />} />
+      <Input label="Password" placeholder="Enter password" type="password" trailingIcon={<Eye size={16} />} />
+      <Input
+        label="Error with icon"
+        placeholder="Enter email"
+        status="error"
+        defaultValue="bad-input"
+        errorText="Please enter a valid email."
+        trailingIcon={<AlertCircle size={16} />}
+      />
       <Input
         label="Both icons"
         placeholder="Search by name"
-        leadingIcon={<SearchIcon />}
-        trailingIcon={<EyeIcon />}
+        leadingIcon={<Search size={16} />}
+        trailingIcon={<Eye size={16} />}
       />
     </div>
   ),

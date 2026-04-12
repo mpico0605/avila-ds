@@ -1,0 +1,247 @@
+import { Meta } from "@storybook/blocks";
+
+<Meta title="Introduction" />
+
+<style>
+  {`
+    @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Bebas+Neue&display=swap');
+
+    .avila-intro {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 48px 24px 80px;
+      font-family: 'Oswald', sans-serif;
+      color: #1a1a1a;
+    }
+
+    .avila-wordmark {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 72px;
+      letter-spacing: 0.06em;
+      line-height: 1;
+      margin: 0 0 4px;
+      color: #111;
+    }
+
+    .avila-wordmark span {
+      color: #C8102E;
+    }
+
+    .avila-subtitle {
+      font-family: 'Oswald', sans-serif;
+      font-size: 20px;
+      font-weight: 400;
+      letter-spacing: 0.04em;
+      color: #555;
+      margin: 0 0 48px;
+    }
+
+    .avila-divider {
+      border: none;
+      border-top: 1px solid #e0e0e0;
+      margin: 40px 0;
+    }
+
+    .avila-section-label {
+      font-family: 'Oswald', sans-serif;
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: #C8102E;
+      margin: 0 0 12px;
+    }
+
+    .avila-origin h2 {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 36px;
+      letter-spacing: 0.04em;
+      margin: 0 0 16px;
+      color: #111;
+    }
+
+    .avila-origin p {
+      font-size: 15px;
+      font-weight: 300;
+      line-height: 1.75;
+      color: #333;
+      margin: 0 0 14px;
+    }
+
+    .avila-quickstart h2 {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 36px;
+      letter-spacing: 0.04em;
+      margin: 0 0 16px;
+      color: #111;
+    }
+
+    .avila-quickstart p {
+      font-size: 15px;
+      font-weight: 300;
+      line-height: 1.75;
+      color: #333;
+      margin: 0 0 16px;
+    }
+
+    .avila-code {
+      background: #0f0f0f;
+      border-radius: 8px;
+      padding: 24px 28px;
+      overflow-x: auto;
+    }
+
+    .avila-code pre {
+      margin: 0;
+      font-family: 'JetBrains Mono', 'Fira Code', 'Cascadia Code', monospace;
+      font-size: 13px;
+      line-height: 1.7;
+      color: #e8e8e8;
+    }
+
+    .avila-code .comment { color: #6a9955; }
+    .avila-code .keyword { color: #c586c0; }
+    .avila-code .string  { color: #ce9178; }
+    .avila-code .tag     { color: #569cd6; }
+
+    .avila-links h2 {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 36px;
+      letter-spacing: 0.04em;
+      margin: 0 0 20px;
+      color: #111;
+    }
+
+    .avila-link-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+    }
+
+    .avila-link-card {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      padding: 20px 24px;
+      border: 1px solid #e0e0e0;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: border-color 0.15s, box-shadow 0.15s;
+    }
+
+    .avila-link-card:hover {
+      border-color: #C8102E;
+      box-shadow: 0 2px 12px rgba(200, 16, 46, 0.08);
+    }
+
+    .avila-link-card-label {
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: #C8102E;
+    }
+
+    .avila-link-card-title {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 22px;
+      letter-spacing: 0.04em;
+      color: #111;
+    }
+
+    .avila-link-card-desc {
+      font-size: 13px;
+      font-weight: 300;
+      color: #666;
+      line-height: 1.5;
+    }
+
+    .avila-badge {
+      display: inline-block;
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      background: #C8102E;
+      color: #fff;
+      border-radius: 4px;
+      padding: 3px 8px;
+      margin-right: 8px;
+      vertical-align: middle;
+    }
+  `}
+</style>
+
+<div className="avila-intro">
+
+  <p className="avila-section-label">Design System</p>
+  <h1 className="avila-wordmark">Avila<span>DS</span></h1>
+  <p className="avila-subtitle">A design system built with intention. Rooted in heritage.</p>
+
+  <hr className="avila-divider" />
+
+  <div className="avila-origin">
+    <p className="avila-section-label">Origin</p>
+    <h2>Built from the ground up.</h2>
+    <p>
+      AvilaDS was created by <strong>Michael Pico Jr.</strong>, Senior Product Designer and Design Systems Lead
+      with 10+ years of experience across fintech and iGaming. Every token, component, and decision in this
+      system reflects a deliberate craft — the kind of care that separates products that merely function from
+      those that feel inevitable.
+    </p>
+    <p>
+      The name draws from family lineage. Michael is a descendant of <strong>Pío Pico</strong>, the last
+      Mexican Governor of Alta California — a figure who governed at the intersection of two worlds, held
+      ground under pressure, and left a mark that outlasted his era. AvilaDS carries that same spirit: a
+      system built to last, rooted in where it came from.
+    </p>
+  </div>
+
+  <hr className="avila-divider" />
+
+  <div className="avila-quickstart">
+    <p className="avila-section-label">Quick Start</p>
+    <h2>Import the tokens.</h2>
+    <p>
+      AvilaDS ships design tokens as CSS custom properties. Import the token stylesheet once at your app's
+      entry point and every component will have access to the full token set.
+    </p>
+
+    <div className="avila-code">
+      <pre>
+        <span className="comment">{"/* In your app's entry file (e.g. main.tsx, index.css) */"}</span>{"\n"}
+        <span className="keyword">{"@import"}</span>{" "}<span className="string">{"'avilaDS-storybook-tokens/tokens/tokens.css'"}</span>{";"}
+        {"\n\n"}
+        <span className="comment">{"/* Or with a JS bundler */"}</span>{"\n"}
+        <span className="keyword">{"import"}</span>{" "}<span className="string">{"'avilaDS-storybook-tokens/tokens/tokens.css'"}</span>{";"}
+        {"\n\n"}
+        <span className="comment">{"/* Then reference tokens anywhere in your CSS */"}</span>{"\n"}
+        <span className="tag">{".my-button"}</span>{" {\n"}
+        {"  background"}{": "}<span className="string">{"var(--avila-color-brand-primary)"}</span>{";\n"}
+        {"  font-family"}{": "}<span className="string">{"var(--avila-font-body)"}</span>{";\n"}
+        {"  border-radius"}{": "}<span className="string">{"var(--avila-radius-md)"}</span>{";\n"}
+        {"}"}
+      </pre>
+    </div>
+  </div>
+
+  <hr className="avila-divider" />
+
+  <div className="avila-links">
+    <p className="avila-section-label">Resources</p>
+    <h2>Go further.</h2>
+    <div className="avila-link-grid">
+      <a className="avila-link-card" href="https://avilaDS-storybook-tokens.vercel.app" target="_blank" rel="noreferrer">
+        <span className="avila-link-card-label">Docs</span>
+        <span className="avila-link-card-title">Live Storybook</span>
+        <span className="avila-link-card-desc">Browse all components, tokens, and usage guidelines in the deployed docs site.</span>
+      </a>
+      <a className="avila-link-card" href="https://github.com/mpico0605/AvilaDS-StoryBook" target="_blank" rel="noreferrer">
+        <span className="avila-link-card-label">Source</span>
+        <span className="avila-link-card-title">GitHub Repo</span>
+        <span className="avila-link-card-desc">View the source, open issues, or contribute to AvilaDS on GitHub.</span>
+      </a>
+    </div>
+  </div>
+
+</div>
